@@ -1,0 +1,27 @@
+html {
+  font: 400 16px/1.35 'GotmanPro', sans-serif;
+  background-color: $white;
+}
+
+body {
+  position: relative;
+  background-color: $white;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.description {
+  padding: 65px 0;
+  color: #000000;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
+  .text {
+    font-family: $secondary-font;
+    font-size: 21px;
+    font-weight: 300;
+  }
+}

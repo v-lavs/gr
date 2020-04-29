@@ -1,0 +1,133 @@
+.section-banner {
+  overflow: hidden;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 834px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+  }
+
+  .side {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/img/red-tesla-model-s.jpg);
+
+  }
+
+  .side1 {
+    clip-path: polygon(26.9% 0, 49.9% 50%, 26.9% 100%, 0 100%, 0 0);
+    transform: translateX(-25%);
+  }
+
+  .side2 {
+    clip-path: polygon(50% 49.5%, 27.2% 0, 72.8% 0);
+    transform: translateY(-25%);
+  }
+
+  .side3 {
+    clip-path: polygon(73.1% 0, 50.1% 50%, 73.1% 100%, 100% 100%, 100% 0);
+    transform: translateX(25%);
+  }
+
+  .side4 {
+    clip-path: polygon(50% 50.5%, 27.2% 100%, 72.8% 100%);
+    transform: translateY(25%);
+  }
+}
+
+
+.link {
+  max-width: 460px;
+  width: 50%;
+  padding: 20px;
+
+  &:hover,
+  &:focus {
+    svg {
+      text {
+        fill: #fff;
+        text-shadow: none;
+      }
+    }
+  }
+}
+
+.wrap-text {
+  width: 100%;
+
+  span {
+    display: flex;
+    flex-direction: column;
+    //align-items: flex-end;
+    width: 100%;
+    max-width: 270px;
+    color: #ffffff;
+    font-family: $secondary-font;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.4;
+    padding-left: 20px;
+  }
+
+  svg {
+    height: 100px;
+    width: 210px;
+    margin-bottom: 8px;
+
+    text {
+      font-size: 148px;
+      fill: transparent;
+      stroke: #fff;
+      stroke-width: 4px;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      transition: fill .35s, text-shadow .2s;
+    }
+  }
+}
+
+.section-grid {
+  position: relative;
+  z-index: 5;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+
+  .link:first-child,
+  .link:last-child {
+    width: 100%;
+
+    span {
+      padding-left: 10px;
+      padding-right: 10px;
+      margin: 0 auto;
+    }
+
+    .wrap-text {
+      text-align: center;
+    }
+  }
+
+  .link:first-child {
+    .wrap-text {
+      svg {
+        width: 360px;
+      }
+    }
+  }
+
+  .link:nth-child(3) {
+    .wrap-text {
+
+    }
+  }
+}
