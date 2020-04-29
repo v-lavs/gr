@@ -1,0 +1,46 @@
+.section-popular-brands {
+  padding-bottom: 110px;
+  .container {
+    display: flex;
+  }
+
+  .content-section {
+    width: 30%;
+    padding: 0 55px 045px;
+  }
+
+  .link-show-brands {
+    position: relative;
+    color: #000000;
+    font-family: $secondary-font;
+    font-size: 21px;
+    font-weight: 600;
+    padding-right: 25px;
+    &:before{
+      position: absolute;
+      content: '';
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 0 8px 9px;
+      border-color: transparent transparent transparent #30bc55;
+      z-index: 2;
+    }
+  }
+
+  .block-view-brands {
+    position: relative;
+    width: 70%;
+    padding-left: 45px;
+  }
+
+  .swiper-pagination {
+    left: -30%;
+    bottom: 74px;
+  }
+}
+
