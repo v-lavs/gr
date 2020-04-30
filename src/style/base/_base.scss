@@ -10,6 +10,8 @@ body {
 
 .wrapper {
   overflow: hidden;
+  max-width: 1920px;
+  padding: 0 45px;
 }
 
 .description {
@@ -47,5 +49,11 @@ body {
   font-size: 17px;
   line-height: 1.35;
   margin-bottom: 35px;
+}
+
+@media all and (max-width: 1200px) {
+  .wrapper{
+    padding: 0;
+  }
 }
 
