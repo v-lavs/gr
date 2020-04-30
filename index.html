@@ -402,35 +402,54 @@
                         you can achive impressive results even without wasting a lot of money in worksops
                     </p>
                 </div>
-
+                <div class="space-delimeter"></div>
                 <div class="choose-car">
                     <form action="#" class="form-choose" method="post">
-                        <select name="do" class="form-control">
-                            <option value="none" hidden="">Machen</option>
-                            <option value="1">первый вариант</option>
-                            <option value="2">второй вариант</option>
-                            <option value="3">третий вариант</option>
-                        </select>
-                        <select name="price" class="form-control">
-                            <option value="none" hidden="">Preis</option>
-                            <option value="1">первый вариант</option>
-                            <option value="2">второй вариант</option>
-                            <option value="3">третий вариант</option>
-                        </select>
-                        <select name="style" class="form-control">
-                            <option value="none" hidden="">Körperstil</option>
-                            <option value="1">первый вариант</option>
-                            <option value="2">второй вариант</option>
-                            <option value="3">третий вариант</option>
-                        </select>
-                        <select name="year" class="form-control">
-                            <option value="none" hidden="">Wählen Sie Jahr</option>
-                            <option value="1">первый вариант</option>
-                            <option value="2">второй вариант</option>
-                            <option value="3">третий вариант</option>
-                        </select>
+
+                        <div class="wrap-select">
+                            <select name="do" class="form-control">
+                                <option data-display="Machen" value="none" hidden="">1 вариант</option>
+                                <option value="1">первый вариант</option>
+                                <option value="2">второй вариант</option>
+                                <option value="3">третий вариант</option>
+                            </select>
+                        </div>
+
+
+                        <div class="wrap-select">
+                            <select name="price" class="form-control">
+                                <option data-display="Preis" value="none" hidden="">1 000</option>
+                                <option value="1">2 000</option>
+                                <option value="2">3 000</option>
+                                <option value="3">4 000</option>
+                            </select>
+                        </div>
+
+
+                        <div class="wrap-select">
+                            <select name="style" class="form-control">
+                                <option data-display="Körperstil" value="none" hidden="">1 variant</option>
+                                <option value="1">2 variant</option>
+                                <option value="2">3 variant</option>
+                                <option value="3">4 variant</option>
+                            </select>
+                        </div>
+
+
+                        <div class="wrap-select">
+                            <select name="year" class="form-control">
+                                <option data-display="Wählen Sie Jahr" value="none" hidden="">2020</option>
+                                <option value="1">2008</option>
+                                <option value="2">2019</option>
+                                <option value="3">2018</option>
+                            </select>
+                        </div>
+
                         <button class="btn btn_choose">
-                            <img src="assets/img/icons/search1.svg" alt="search">
+                            <svg version="1.1" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <title>search1</title>
+                                <path d="M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.050 4.95-2.050 3.682 0.782 4.95 2.050 2.050 3.017 2.050 4.95c0 1.886-0.745 3.597-1.959 4.856zM21.707 20.293l-3.675-3.675c1.231-1.54 1.968-3.493 1.968-5.618 0-2.485-1.008-4.736-2.636-6.364s-3.879-2.636-6.364-2.636-4.736 1.008-6.364 2.636-2.636 3.879-2.636 6.364 1.008 4.736 2.636 6.364 3.879 2.636 6.364 2.636c2.125 0 4.078-0.737 5.618-1.968l3.675 3.675c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z"></path>
+                            </svg>
                         </button>
                     </form>
                 </div>
@@ -448,7 +467,7 @@
                 <div class="left-content">
                     <ul class="advantages-list">
                         <li class="advantages-list__item">
-                            <div class="card">
+                            <div class="card advantages-card">
                                 <h3 class="card__title">5,5% FIX pro Jahr mit
                                     Greenride Darlehen</h3>
                                 <div class="card__body">
@@ -458,7 +477,7 @@
                             </div>
                         </li>
                         <li class="advantages-list__item">
-                            <div class="card">
+                            <div class="card advantages-card">
                                 <h3 class="card__title">Vorteile Auf Einen Blick</h3>
                                 <div class="card__body">
                                     <ul>
@@ -474,13 +493,13 @@
                         </li>
                     </ul>
                     <div class="wrap-btn">
-                        <button type="button" class="btn btn-send">Anfrage senden</button>
+                        <button type="button" class="btn btn_main">Anfrage<br> senden</button>
                     </div>
                 </div>
                 <div class="right-content">
                     <ul class="advantages-list">
                         <li class="advantages-list__item">
-                            <div class="card">
+                            <div class="card advantages-card">
                                 <h3 class="card__title">Mit 10% Rendite in den
                                     eigenen Tesla investieren</h3>
                                 <div class="card__body">
@@ -491,7 +510,7 @@
                             </div>
                         </li>
                         <li class="advantages-list__item">
-                            <div class="card">
+                            <div class="card advantages-card">
                                 <h3 class="card__title">Vorteile Auf Einen Blick</h3>
                                 <div class="card__body">
                                     <ul>
@@ -507,7 +526,7 @@
                         </li>
                     </ul>
                     <div class="wrap-btn">
-                        <button type="button" class="btn btn-send">Anfrage senden</button>
+                        <button type="button" class="btn btn_main">Anfrage<br> senden</button>
                     </div>
                 </div>
             </div>

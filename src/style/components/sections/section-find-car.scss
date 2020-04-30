@@ -1,8 +1,12 @@
-.section-find-car{
+.section-find-car {
   padding-top: 100px;
   padding-bottom: 100px;
 
-  .bg-section{
+  .space-delimeter {
+    padding-top: 145px;
+  }
+
+  .bg-section {
     display: flex;
     align-items: center;
     background-repeat: no-repeat;
@@ -11,21 +15,52 @@
     background-size: cover;
     min-height: 790px;
   }
-  .container{
+
+  .container {
     flex-grow: 1;
   }
 
-  .section__title{
+  .section__title {
     margin-bottom: 30px;
     color: $white;
   }
-  .section__text{
+
+  .section__text {
     max-width: 900px;
     font-size: 21px;
     color: $white;
     font-weight: 300;
   }
-  .block-advantages{
-    padding-top: 80px;
+
+  .form-choose {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    border-radius: 10px;
+  }
+
+  .wrap-select {
+    width: 22.5%;
+    padding-left: 24px;
+  }
+
+  .btn_choose {
+    display: flex;
+    width: 10%;
+    border-radius: 0 10px 10px 0;
+    padding: 25px 20px 24px;
+    svg{
+      width: 43px;
+      height: 45px;
+      display: block;
+      margin: auto;
+    }
+    &:hover,
+    &:focus{
+      svg{
+        fill: #44b332;
+      }
+    }
   }
 }

@@ -1,16 +1,18 @@
 .btn{
   display: inline-block;
-  color: #ffffff;
   font-family: $primary-font;
-  font-size: 20px;
-  font-weight: 300;
   line-height: 1.25;
   border-radius: 5px;
-  padding: 20px 32px;
+  font-size: 25px;
+  font-weight: 500;
+  border: none;
+  color: $white;
+  background-color: $light-green-200;
   transition: background-color .35s, color .3s, box-shadow .35s;
   &_main{
-    border: 1px solid $white;
-    background-color: transparent;
+    padding: 8px 10px;
+    min-width: 223px;
+    line-height: 1.04;
   }
   &:hover,
   &:focus{

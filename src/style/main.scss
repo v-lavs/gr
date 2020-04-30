@@ -1,6 +1,8 @@
 @import 'utils/variables';
 @import 'utils/mixins';
 
+@import '../lib/jquery-nice-select-1.1.0/scss/nice-select';
+
 @import 'base/reset';
 @import 'base/typography';
 @import 'base/base';
@@ -9,6 +11,7 @@
 
 @import 'components/slider';
 @import 'components/button';
+@import 'components/custom-select';
 @import 'components/sections/section-banner';
 @import 'components/sections/section-popular-brands';
 @import 'components/sections/section-reviews';

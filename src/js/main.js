@@ -3,6 +3,9 @@
  * */
 
 //= include ../lib/jquery-3.3.1.min.js
+//= include ../lib/jquery-nice-select-1.1.0/js/jquery.js
+//= include ../lib/jquery-nice-select-1.1.0/js/jquery.nice-select.js
+
 
 
 /**
@@ -33,5 +36,10 @@ $(document).ready(function () {
             clickable: true,
         },
     });
-
+    /**
+     * CUSTOM SELECT
+     **/
+    $(document).ready(function() {
+        $('select').niceSelect();
+    });
 });

@@ -6,13 +6,47 @@
     margin-bottom: 60px;
   }
   .block-advantages{
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     padding-top: 80px;
+    &:before{
+      position: absolute;
+      content: '';
+      display: block;
+      width: 1px;
+      background-color: #cfcfcf;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(50%);
+      z-index: 3;
+    }
+
   }
 
   .left-content,
   .right-content{
     width: 50%;
+  }
+
+  .advantages-card{
+    max-width: 560px;
+    padding: 0 15px 40px;
+    .card__title{
+      max-width: 330px;
+      color: $light-green-100;
+      font-family: $secondary-font;
+      font-size: 25px;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+    .card__body{
+      color: #010101;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.35;
+    }
   }
 }
