@@ -47,7 +47,8 @@
     padding: 5px;
     background: $white;
     z-index: 2;
-    a{
+
+    a {
       display: inline-block;
     }
   }
@@ -71,7 +72,17 @@
       z-index: 1;
     }
   }
-  .header_bottom{
-    height: 70px;
+
+  .header_bottom {
+    padding: 15px 0;
+    .logo-list {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      &__item{
+        padding: 5px;
+        opacity: .5;
+      }
+    }
   }
 }

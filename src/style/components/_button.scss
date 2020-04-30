@@ -1,4 +1,4 @@
-.btn{
+.btn {
   display: inline-block;
   font-family: $primary-font;
   line-height: 1.25;
@@ -9,15 +9,35 @@
   color: $white;
   background-color: $light-green-200;
   transition: background-color .35s, color .3s, box-shadow .35s;
-  &_main{
+
+  &_main {
     padding: 8px 10px;
     min-width: 223px;
     line-height: 1.04;
   }
+
   &:hover,
-  &:focus{
+  &:focus {
     background-color: $white;
     color: $light-green;
-    box-shadow: 2px 4px 49px rgba(35, 93, 15, 0.65);
+    box-shadow: 2px 4px 21px rgba(35, 93, 15, 0.65);
+  }
+
+  &_round {
+    border-radius: 50%;
+    z-index: 10;
+    height: 71px;
+    width: 71px;
+    display: inline-flex;
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
   }
 }
+
+.letter {
+  width: 39px;
+  height: 34px;
+  margin: auto;
+}
+
