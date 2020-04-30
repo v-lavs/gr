@@ -39,6 +39,11 @@ body {
  .green-color{
    color: #30bc55;
  }
+  &_big{
+    font-size: 52px;
+    width: 100%;
+    max-width: initial;
+  }
 }
 
 .section__text{

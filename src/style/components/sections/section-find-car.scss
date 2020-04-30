@@ -1,0 +1,31 @@
+.section-find-car{
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .bg-section{
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    min-height: 790px;
+  }
+  .container{
+    flex-grow: 1;
+  }
+
+  .section__title{
+    margin-bottom: 30px;
+    color: $white;
+  }
+  .section__text{
+    max-width: 900px;
+    font-size: 21px;
+    color: $white;
+    font-weight: 300;
+  }
+  .block-advantages{
+    padding-top: 80px;
+  }
+}
