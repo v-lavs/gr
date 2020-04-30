@@ -11,6 +11,7 @@
   }
 
   .right-content {
+    position: relative;
     width: 40%;
   }
 
@@ -19,7 +20,8 @@
     background-color: #30bc55;
     padding-left: 95px;
     color: $white;
-
+    padding-bottom: 55px;
+    padding-top: 70px;
     &:before {
       position: absolute;
       content: '';
@@ -32,7 +34,9 @@
       z-index: 3;
     }
   }
-
+.swiper-pagination{
+  //transform: rotateY(90deg);
+}
   .slogan {
     width: 90%;
     height: 90px;
@@ -40,7 +44,8 @@
     font-size: 44px;
     font-weight: 600;
     line-height: 1.07;
-    text-align: center;
+    margin-left: 66px;
+    margin-bottom: 30px;
   }
 
   .wrap-avatar {
@@ -48,11 +53,77 @@
     width: 60px;
     border-radius: 50%;
     overflow: hidden;
+    margin-right: 25px;
   }
 
   .img-avatar {
     width: 100%;
     height: 100%;
     vertical-align: middle;
+  }
+
+  .slider-reviews{
+    height: 340px;
+    width: 65%;
+    margin-left: 125px;
+  }
+
+  .link-bay-now {
+    text-transform: uppercase;
+    position: relative;
+    color: inherit;
+    font-family: $secondary-font;
+    font-size: 21px;
+    font-weight: 600;
+    padding-right: 25px;
+    margin-left: 125px;
+    &:before{
+      position: absolute;
+      content: '';
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 0 8px 9px;
+      border-color: transparent transparent transparent $white;
+      z-index: 2;
+    }
+  }
+
+  .card{
+    &__header{
+      display: flex;
+      align-items: center;
+      padding: 25px 0;
+      .name,
+      .car-brand{
+        display: block;
+      }
+    }
+
+    &__body{
+      max-width: 530px;
+      font-family: $secondary-font;
+      font-size: 17px;
+      line-height: 1.23;
+    }
+  }
+
+  .right-content__bg{
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    min-height: 705px;
+    width: 40vw;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 2;
   }
 }
