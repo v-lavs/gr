@@ -8,15 +8,20 @@
   .left-content{
     display: flex;
     align-items: center;
-    width: 57%;
+    width: 51.5%;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #00a651;
+    border-radius: 10px;
   }
   .right-content{
     position: relative;
-    width: 43%;
-    min-height: 620px;
-    padding-top: 95px;
+    width: 48.5%;
     color: $black;
-    padding-left: 110px;
+    padding-left: 6%;
+    padding-top: 85px;
+    padding-bottom: 70px;
     .label {
       display: inline-block;
       font-family: $secondary-font;
@@ -50,7 +55,7 @@
     }
   }
   .wrap-bg-section{
-    width: 50vw;
+    width: calc(50vw + 15%);
     position: absolute;
     left: -15%;
     right: 0;
@@ -61,7 +66,6 @@
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
-
   }
   .section__title{
     margin-bottom: 76px;
@@ -70,12 +74,14 @@
   .wrap-map{
     position: relative;
     width: 100%;
-    height: 520px;
-    padding: 22px;
-    background: transparent;
-    border: 1px solid #00a651;
-    border-radius: 10px;
+    padding-top: 55%;
     .map{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
       width: 100%;
       height: 100%;
     }

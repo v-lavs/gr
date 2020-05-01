@@ -6,27 +6,25 @@
   padding: 0 15px;
 }
 
-@media all and (max-width: 1200px) {
+@media all and (max-width: 1465px) {
   .container {
-    max-width: 1080px;
+    max-width: 1240px;
   }
 }
 
-@media all and (max-width: 991px) {
+@media all and (max-width: 1240px) {
   .container {
-    max-width: 900px;
-    padding: 0 15px;
+    max-width: 1050px;
   }
 }
 
-@media all and (max-width: 899px) {
+@media all and (max-width: 1051px) {
   .container {
-    max-width: 840px;
-    padding: 0 15px;
+    max-width: 767px;
   }
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 768px) {
   .container {
     max-width: 680px;
   }

@@ -1,11 +1,46 @@
 .section-popular-brands {
   padding-bottom: 110px;
+
   .container-default {
     display: flex;
   }
 
+  .brands-pagination {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+
+    &_active {
+      display: flex;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: relative;
+      left: auto;
+      right: auto;
+      top: auto;
+      bottom: auto;
+      margin-top: 0;
+    }
+
+    .swiper-pagination {
+      position: relative;
+    }
+  }
+  
+  .swiper-container {
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    -o-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
   .content-section {
-    width: 30%;
+    width: 465px;
+    flex-shrink: 0;
     padding: 0 55px 045px;
   }
 
@@ -16,7 +51,8 @@
     font-size: 21px;
     font-weight: 600;
     padding-right: 25px;
-    &:before{
+
+    &:before {
       position: absolute;
       content: '';
       right: 0;
@@ -34,16 +70,35 @@
 
   .block-view-brands {
     position: relative;
-    width: 70%;
+    flex-grow: 1;
+    max-width: calc(100% - 465px);
     padding-left: 45px;
   }
 
-  .swiper-pagination {
-    left: -30%;
-    bottom: 74px;
+  .swiper-slide {
+    padding-left: 10px;
+    padding-right: 20px;
   }
+
+  .swiper-container-initialized {
+    .card {
+      margin-left: auto;
+    }
+  }
+
+  .slider-brands_static {
+    .swiper-wrapper {
+      justify-content: space-between;
+    }
+    .swiper-slide {
+      max-width: 350px;
+      flex-grow: 1;
+    }
+  }
+
   .card {
     max-width: 320px;
+    width: 100%;
     border-radius: 10px;
     border: 1px solid #b7b7b7;
     text-align: center;
@@ -90,3 +145,23 @@
   }
 }
 
+@media all and (max-width: 1465px) {
+  .section-popular-brands {
+   .content-section {
+     padding-right: 15px;
+     padding-left: 20px;
+   }
+    .brands-pagination{
+      padding-top: 40px;
+    }
+  }
+}
+
+@media all and (max-width: 1240px) {
+  .content-section{
+    width: 40%;
+  }
+  .block-view-brands{
+    width: 60%;
+  }
+}

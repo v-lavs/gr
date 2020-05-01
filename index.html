@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fonts/fonts.css">
     <!--Style-->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="build/main.css">
@@ -153,7 +152,10 @@
             <div class="animated bounceInRight side side3"></div>
             <div class="animated  bounceInUp side side4"></div>
             <button class="btn btn_round">
-                <svg class="letter" height="380pt" viewBox="0 -67 380 380" fill="#ffffff" width="380pt" xmlns="http://www.w3.org/2000/svg"><path d="m30 0h320c14.402344.0390625 26.761719 10.261719 29.5 24.398438l-189.5 105.601562-189.5-105.601562c2.738281-14.136719 15.097656-24.3593755 29.5-24.398438zm320 246.601562h-320c-16.546875-.050781-29.953125-13.453124-30-30v-169.601562l185.101562 103.199219c1.5.824219 3.183594 1.273437 4.898438 1.300781 1.722656.019531 3.414062-.429688 4.898438-1.300781l185.101562-103.199219v169.601562c-.011719 16.5625-13.4375 29.984376-30 30zm0 0"/></svg>
+                <svg class="letter" height="380pt" viewBox="0 -67 380 380" fill="#ffffff" width="380pt"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="m30 0h320c14.402344.0390625 26.761719 10.261719 29.5 24.398438l-189.5 105.601562-189.5-105.601562c2.738281-14.136719 15.097656-24.3593755 29.5-24.398438zm320 246.601562h-320c-16.546875-.050781-29.953125-13.453124-30-30v-169.601562l185.101562 103.199219c1.5.824219 3.183594 1.273437 4.898438 1.300781 1.722656.019531 3.414062-.429688 4.898438-1.300781l185.101562-103.199219v169.601562c-.011719 16.5625-13.4375 29.984376-30 30zm0 0"/>
+                </svg>
             </button>
         </div>
     </section>
@@ -173,10 +175,16 @@
                     dolore magna aliqua. Porttitor massa id
                 </p>
                 <a href="#" class="link-show-brands">Alle Marken anzeigen</a>
+
+                <div class="brands-pagination" id="popularBrandsPagination">
+                    <div class="swiper-button-prev"><span class="icon icon-arrow-left"></span></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"><span class="icon icon-arrow-right"></span></div>
+                </div>
             </div>
 
             <div class="block-view-brands">
-                <div class="swiper-container slider-brands">
+                <div class="swiper-container slider-brands slider-brands_static">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="card card-brand">
@@ -233,24 +241,8 @@
                                 <a href="#" class="card__link">Alle Modelle</a>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="card card-brand">
-                                <div class="bg-logo-brand"
-                                     style="background-image: url(assets/img/siat-middle.png);"></div>
-                                <div class="wrap-img">
-                                    <img src="assets/img/car-siat.jpg" alt="Siat" class="img-car">
-                                </div>
-                                <h4 class="card__title">Seat</h4>
-                                <a href="#" class="card__link">Alle Modelle</a>
-                            </div>
-                        </div>
                     </div>
-                    <!-- Add Arrows -->
-
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
@@ -277,13 +269,13 @@
                                         </div>
                                     </div>
                                     <div class="card__body">
-                                        <p>
+                                        <p class="slide-text">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                             eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                             Porttitor massa id neque aliquam vestibulum morbi blandit
                                             Nibh nisl condimentum id venenatis a.
                                         </p>
-                                        <p>
+                                        <p class="slide-text">
                                             Orci a scelerisque purus semper eget duis at tellus at.
                                             Morbi tristique senectus et netus et malesuada fames ac turpis.
                                             Risus feugiat in ante metus dictum.
@@ -334,12 +326,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-
                     <a href="#" class="link-bay-now">KAUFE JETZT</a>
+                    <div class="reviews-pagination" id="reviewsPagination">
+                        <div class="swiper-button-prev"><span class="icon icon-arrow-left"></span></div>
+                        <div class="swiper-pagination swiper-pagination_vertical"></div>
+                        <div class="swiper-button-next"><span class="icon icon-arrow-right"></span></div>
+                    </div>
                 </div>
+
             </div>
             <div class="right-content">
                 <div class="right-content__bg" style="background-image: url(assets/img/charger.jpg);"></div>
@@ -411,7 +405,7 @@
                 <div class="wrap-map" id="map">
                     <iframe class="map"
                             src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d688941.5182815484!2d12.790833960383402!3d47.58378353498768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1saustrian%20restaurant!5e0!3m2!1suk!2sua!4v1588244246388!5m2!1suk!2sua"
-                            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                            width="100%" height="520" frameborder="0" style="border:0;" allowfullscreen=""
                             aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
@@ -441,56 +435,54 @@
                     </p>
                 </div>
                 <div class="space-delimeter"></div>
-                <div class="choose-car">
-                    <form action="#" class="form-choose" method="post">
+                <form action="#" class="form-choose" method="post">
 
-                        <div class="wrap-select">
-                            <select name="do" class="form-control">
-                                <option data-display="Machen" value="none" hidden="">1 вариант</option>
-                                <option value="1">первый вариант</option>
-                                <option value="2">второй вариант</option>
-                                <option value="3">третий вариант</option>
-                            </select>
-                        </div>
-
-
-                        <div class="wrap-select">
-                            <select name="price" class="form-control">
-                                <option data-display="Preis" value="none" hidden="">1 000</option>
-                                <option value="1">2 000</option>
-                                <option value="2">3 000</option>
-                                <option value="3">4 000</option>
-                            </select>
-                        </div>
+                    <div class="wrap-select">
+                        <select name="do" class="custom-select form-control">
+                            <option data-display="Machen" value="none" hidden="">1 вариант</option>
+                            <option value="1">первый вариант</option>
+                            <option value="2">второй вариант</option>
+                            <option value="3">третий вариант</option>
+                        </select>
+                    </div>
 
 
-                        <div class="wrap-select">
-                            <select name="style" class="form-control">
-                                <option data-display="Körperstil" value="none" hidden="">1 variant</option>
-                                <option value="1">2 variant</option>
-                                <option value="2">3 variant</option>
-                                <option value="3">4 variant</option>
-                            </select>
-                        </div>
+                    <div class="wrap-select">
+                        <select name="price" class="custom-select form-control">
+                            <option data-display="Preis" value="none" hidden="">1 000</option>
+                            <option value="1">2 000</option>
+                            <option value="2">3 000</option>
+                            <option value="3">4 000</option>
+                        </select>
+                    </div>
 
 
-                        <div class="wrap-select">
-                            <select name="year" class="form-control">
-                                <option data-display="Wählen Sie Jahr" value="none" hidden="">2020</option>
-                                <option value="1">2008</option>
-                                <option value="2">2019</option>
-                                <option value="3">2018</option>
-                            </select>
-                        </div>
+                    <div class="wrap-select">
+                        <select name="style" class="custom-select form-control">
+                            <option data-display="Körperstil" value="none" hidden="">1 variant</option>
+                            <option value="1">2 variant</option>
+                            <option value="2">3 variant</option>
+                            <option value="3">4 variant</option>
+                        </select>
+                    </div>
 
-                        <button class="btn btn_choose">
-                            <svg version="1.1" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <title>search1</title>
-                                <path d="M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.050 4.95-2.050 3.682 0.782 4.95 2.050 2.050 3.017 2.050 4.95c0 1.886-0.745 3.597-1.959 4.856zM21.707 20.293l-3.675-3.675c1.231-1.54 1.968-3.493 1.968-5.618 0-2.485-1.008-4.736-2.636-6.364s-3.879-2.636-6.364-2.636-4.736 1.008-6.364 2.636-2.636 3.879-2.636 6.364 1.008 4.736 2.636 6.364 3.879 2.636 6.364 2.636c2.125 0 4.078-0.737 5.618-1.968l3.675 3.675c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z"></path>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
+
+                    <div class="wrap-select">
+                        <select name="year" class="custom-select form-control">
+                            <option data-display="Wählen Sie Jahr" value="none" hidden="">2020</option>
+                            <option value="1">2008</option>
+                            <option value="2">2019</option>
+                            <option value="3">2018</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn_choose">
+                        <svg version="1.1" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                             viewBox="0 0 24 24">
+                            <path d="M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.050 4.95-2.050 3.682 0.782 4.95 2.050 2.050 3.017 2.050 4.95c0 1.886-0.745 3.597-1.959 4.856zM21.707 20.293l-3.675-3.675c1.231-1.54 1.968-3.493 1.968-5.618 0-2.485-1.008-4.736-2.636-6.364s-3.879-2.636-6.364-2.636-4.736 1.008-6.364 2.636-2.636 3.879-2.636 6.364 1.008 4.736 2.636 6.364 3.879 2.636 6.364 2.636c2.125 0 4.078-0.737 5.618-1.968l3.675 3.675c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z"></path>
+                        </svg>
+                    </button>
+                </form>
             </div>
         </div>
 
@@ -502,167 +494,172 @@
                 <span class="green-color">sicher</span>
             </h2>
             <div class="block-advantages">
-                <div class="left-content">
-                    <ul class="advantages-list">
-                        <li class="advantages-list__item">
-                            <div class="card advantages-card">
-                                <h3 class="card__title">5,5% FIX pro Jahr mit
-                                    Greenride Darlehen</h3>
-                                <div class="card__body">
-                                    6 neue Tesla Model 3 kommen demnächstin unserer Flotte. 5,5%
-                                    Zinsen bieten wir unseren Investoren.
-                                </div>
+                <div class="block__col left-content">
+
+
+                    <div class="card advantages-card">
+                        <h3 class="advantages-card__title">5,5% FIX pro Jahr mit
+                            Greenride Darlehen</h3>
+                        <div class="advantages-card__body">
+                            6 neue Tesla Model 3 kommen demnächstin unserer Flotte. 5,5%
+                            Zinsen bieten wir unseren Investoren.
+                        </div>
+                    </div>
+
+                    <div class="card advantages-card">
+                        <h3 class="advantages-card__title">Vorteile Auf Einen Blick</h3>
+                        <div class="advantages-card__body">
+                            <ul>
+                                <li>Kurze Laufzeit: 24 Monate</li>
+                                <li>Bereits ab EUR 2.000</li>
+                                <li>Fahren Sie als Investor besonders günstig (ab 99€/Tag)</li>
+                                <li>Investition in eine Zukunftstechnologie</li>
+                                <li>Jeder Teilnehmer spart bis zu 30t CO2/Jahr</li>
+                                <li>5,5% jährliche Zinsen</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="block__footer">
+                        <div class="condition">
+                            <div class="financed">
+                                <span class="green-color">21%</span><br>
+                                Finanziert
                             </div>
-                        </li>
-                        <li class="advantages-list__item">
-                            <div class="card advantages-card">
-                                <h3 class="card__title">Vorteile Auf Einen Blick</h3>
-                                <div class="card__body">
-                                    <ul>
-                                        <li>Kurze Laufzeit: 24 Monate</li>
-                                        <li>Bereits ab EUR 2.000</li>
-                                        <li>Fahren Sie als Investor besonders günstig (ab 99€/Tag)</li>
-                                        <li>Investition in eine Zukunftstechnologie</li>
-                                        <li>Jeder Teilnehmer spart bis zu 30t CO2/Jahr</li>
-                                        <li>5,5% jährliche Zinsen</li>
-                                    </ul>
-                                </div>
+                            <div class="source-financing">
+                                <span class="green-color">€ 15.000</span><br>
+                                von € 70.000 Depot finanziert
                             </div>
-                        </li>
-                    </ul>
-                    <div class="wrap-btn">
+
+                        </div>
                         <button type="button" class="btn btn_main">Anfrage<br> senden</button>
                     </div>
                 </div>
-                <div class="right-content">
-                    <ul class="advantages-list">
-                        <li class="advantages-list__item">
-                            <div class="card advantages-card">
-                                <h3 class="card__title">Mit 10% Rendite in den
-                                    eigenen Tesla investieren</h3>
-                                <div class="card__body">
-                                    Investieren Sie in Ihren eigenen Tesla und profitieren
-                                    Sie von unserem Know-how. Wir garantieren dir 10%
-                                    Rendite + EK Rückzahlung.
-                                </div>
-                            </div>
-                        </li>
-                        <li class="advantages-list__item">
-                            <div class="card advantages-card">
-                                <h3 class="card__title">Vorteile Auf Einen Blick</h3>
-                                <div class="card__body">
-                                    <ul>
-                                        <li>Eigenes Fahrzeug – sicheres Investment</li>
-                                        <li>Investition ab EUR 10.000 pro Auto</li>
-                                        <li>Das Fahrzeug gehört Ihnen!</li>
-                                        <li>Einsatz von bereits vorhandenen Teslas möglich</li>
-                                        <li>Rückzahlung des EK innerhalb von 3-5 Jahren</li>
-                                        <li>10% Jahresrendite auf das eingesetzte Eigenkapital (EK)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="wrap-btn">
+                <div class="block__col right-content">
+                    <div class="card advantages-card">
+                        <h3 class="advantages-card__title">Mit 10% Rendite in den
+                            eigenen Tesla investieren</h3>
+                        <div class="advantages-card__body">
+                            Investieren Sie in Ihren eigenen Tesla und profitieren
+                            Sie von unserem Know-how. Wir garantieren dir 10%
+                            Rendite + EK Rückzahlung.
+                        </div>
+                    </div>
+
+                    <div class="card advantages-card">
+                        <h3 class="advantages-card__title">Vorteile Auf Einen Blick</h3>
+                        <div class="advantages-card__body">
+                            <ul>
+                                <li>Eigenes Fahrzeug – sicheres Investment</li>
+                                <li>Investition ab EUR 10.000 pro Auto</li>
+                                <li>Das Fahrzeug gehört Ihnen!</li>
+                                <li>Einsatz von bereits vorhandenen Teslas möglich</li>
+                                <li>Rückzahlung des EK innerhalb von 3-5 Jahren</li>
+                                <li>10% Jahresrendite auf das eingesetzte Eigenkapital (EK)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="block__footer">
                         <button type="button" class="btn btn_main">Anfrage<br> senden</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+</div>
 
-    <footer class="footer">
-        <div class="footer_top">
-            <div class="container">
-                <div class="block-list">
-                    <h3 class="block-list__title">Wie können wir ihnen helfen?</h3>
-                    <ul class="list">
-                        <li class="list__item">
-                            <a href="#" class="list__link">Kontaktieren Sie uns</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">Über Greenride</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">Franchise Partner</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">Impressum</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="block-list">
-                    <h3 class="block-list__title">Mietwagenangebote</h3>
-                    <ul class="list">
-                        <li class="list__item">
-                            <a href="#" class="list__link">Mietwagen Wien</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">Mietwagen Linz</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">Mietwagen Graz</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">Mietwagen Klagenfurt</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="block-list">
-                    <h3 class="block-list__title">Nachhaltig investieren</h3>
-                    <ul class="list">
-                        <li class="list__item">
-                            <a href="#" class="list__link">Nachhaltig investieren</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">Anfrage Investition Greenride</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">Gutscheine</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">Tesla S Spezifikationen</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="block-list">
-                    <h3 class="block-list__title">Nachhaltig investieren</h3>
-                    <ul class="list">
-                        <li class="list__item">
-                            <a href="#" class="list__link">Flughafentaxi Wien</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">ZUM Flughafen Wien</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">VOM Flughafen Wien</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">Limousinenservice Wien</a>
-                        </li>
-                    </ul>
-                </div>
+<footer class="footer">
+    <div class="footer_top">
+        <div class="container">
+            <div class="block-list">
+                <h3 class="block-list__title">Wie können wir ihnen helfen?</h3>
+                <ul class="list">
+                    <li class="list__item">
+                        Kontaktieren Sie uns
+                    </li>
+                    <li class="list__item">
+                        Über Greenride
+                    </li>
+                    <li class="list__item">
+                        Franchise Partner
+                    </li>
+                    <li class="list__item">
+                        Impressum
+                    </li>
+                </ul>
             </div>
-        </div>
-        <div class="footer_bottom">
-            <div class="container">
-                <div class="copyright"> &copy; Greenride</div>
-                <ul class="list menu-info">
+            <div class="block-list">
+                <h3 class="block-list__title">Mietwagenangebote</h3>
+                <ul class="list">
                     <li class="list__item">
-                        <a href="#" class="list__link">Driver info</a>
+                        Mietwagen Wien
                     </li>
                     <li class="list__item">
-                        <a href="#" class="list__link">AGB</a>
+                        Mietwagen Linz
                     </li>
                     <li class="list__item">
-                        <a href="#" class="list__link">Impressum</a>
+                        Mietwagen Graz
+                    </li>
+                    <li class="list__item">
+                        Mietwagen Klagenfurt
+                    </li>
+                </ul>
+            </div>
+            <div class="block-list">
+                <h3 class="block-list__title">Nachhaltig investieren</h3>
+                <ul class="list">
+                    <li class="list__item">
+                        Nachhaltig investieren
+                    </li>
+                    <li class="list__item">
+                        Anfrage Investition Greenride
+                    </li>
+                    <li class="list__item">
+                        Gutscheine
+                    </li>
+                    <li class="list__item">
+                        Tesla S Spezifikationen
+                    </li>
+                </ul>
+            </div>
+            <div class="block-list">
+                <h3 class="block-list__title">Nachhaltig investieren</h3>
+                <ul class="list">
+                    <li class="list__item">
+                        Flughafentaxi Wien
+                    </li>
+                    <li class="list__item">
+                        ZUM Flughafen Wien
+                    </li>
+                    <li class="list__item">
+                        VOM Flughafen Wien
+                    </li>
+                    <li class="list__item">
+                        Limousinenservice Wien
                     </li>
                 </ul>
             </div>
         </div>
-    </footer>
-</div>
-<script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    </div>
+    <div class="footer_bottom">
+        <div class="container">
+            <div class="copyright"> &copy; Greenride</div>
+            <ul class="list menu-info">
+                <li class="list__item">
+                    <a href="#" class="list__link">Driver info</a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__link">AGB</a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__link">Impressum</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 <script src="build/main.js"></script>
 </body>

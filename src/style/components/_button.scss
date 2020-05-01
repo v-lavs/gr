@@ -5,13 +5,13 @@
   border-radius: 5px;
   font-size: 25px;
   font-weight: 500;
-  border: none;
+  border: 2px solid $light-green-200;
   color: $white;
   background-color: $light-green-200;
   transition: background-color .35s, color .3s, box-shadow .35s;
 
   &_main {
-    padding: 8px 10px;
+    padding: 6px 8px;
     min-width: 223px;
     line-height: 1.04;
   }
@@ -32,11 +32,18 @@
     position: fixed;
     right: 5%;
     bottom: 10%;
+    &:hover,
+    &:focus {
+      .letter {
+        fill:$light-green-200;
+      }
+    }
   }
 }
 
 .letter {
-  width: 39px;
+  width: 100%;
+  max-width: 39px;
   height: 34px;
   margin: auto;
 }
