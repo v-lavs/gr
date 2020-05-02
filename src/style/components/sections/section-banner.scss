@@ -17,7 +17,7 @@
       width: 2px;
       bottom: -100%;
       top: -100%;
-      z-index: 20;
+      z-index: 3;
 
       -webkit-transform-origin: center;
       -moz-transform-origin: center;
@@ -94,7 +94,9 @@
 
     &:hover,
     &:focus {
-      color: #fff;
+      .banner-category__title{
+        color: #fff;
+      }
     }
 
     &:before {
@@ -126,7 +128,7 @@
       &:before {
         display: block;
         border-width: 100vw 100vw 0 100vw;
-        border-color: rgba(68, 179, 50, 0.4) transparent transparent transparent;
+        border-color: rgba(3, 150, 66, 0.6) transparent transparent transparent;
         -webkit-transform: translate(-50%, -100%);
         -moz-transform: translate(-50%, -100%);
         -ms-transform: translate(-50%, -100%);
@@ -167,7 +169,7 @@
         -o-transform: translate(-50%, 100%);
         transform: translate(-50%, 100%);
         border-width: 0 100vw 100vw 100vw;
-        border-color: transparent transparent rgba(68, 179, 50, 0.6) transparent;
+        border-color: transparent transparent rgba(3, 150, 66, 0.6) transparent;
         margin-top: 30px;
       }
 
@@ -197,7 +199,7 @@
         left: 100%;
         display: block;
         border-width: 100vw 0 100vw 100vw;
-        border-color: transparent transparent transparent rgba(68, 179, 50, 0.6);
+        border-color: transparent transparent transparent rgba(3, 150, 66, 0.6);
 
         -webkit-transform: translate(-200%, -50%);
         -moz-transform: translate(-200%, -50%);
@@ -235,7 +237,7 @@
         display: block;
 
         border-width: 100vw 100vw 100vw 0;
-        border-color: transparent rgba(68, 179, 50, 0.6) transparent transparent;
+        border-color: transparent rgba(3, 150, 66, 0.6) transparent transparent;
 
         -webkit-transform: translate(100%, -50%);
         -moz-transform: translate(100%, -50%);
@@ -283,10 +285,11 @@
 
   &__title {
     margin-bottom: 0;
-
+    position: relative;
     font-size: 80px;
     line-height: 1.2;
     color: #fff;
+    z-index: 5;
 
     @supports (-webkit-text-stroke: 2px #fff) {
       color: transparent;

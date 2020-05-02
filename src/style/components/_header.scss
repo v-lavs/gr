@@ -1,9 +1,8 @@
 
 .header {
-  padding-top: 26px;
-
   &_top {
     position: relative;
+    padding-top: 26px;
     padding-bottom: 37px;
     border-bottom: 1px solid $light-gray;
   }
@@ -26,7 +25,7 @@
   .dropdown {
     position: relative;
     display: inline-block;
-    width: 50px;
+    width: 70px;
     font-family: $secondary-font;
     font-weight: 600;
     color: $dark-gray-200;
@@ -46,13 +45,23 @@
     width: 100%;
     padding: 5px;
     background: $white;
-    z-index: 2;
-
+    border: 1px solid $light-gray;
+    box-shadow:2px 2px 33px 0 rgba(97,145,48, .18);
+    -webkit-box-shadow:2px 2px 33px 0 rgba(97,145,48, .18);
+    -moz-box-shadow:2px 2px 33px 0 rgba(97,145,48, .18);
+    z-index: 5;
     a {
-      display: inline-block;
-      padding-bottom: 10px;
+      display: block;
+      padding: 8px 8px 4px;
+      transition: .35s;
+      border-bottom:1px solid $light-gray;
+      &:hover,
+      &:focus{
+        color: $primary-color;
+      }
       &:last-child{
         padding-bottom: 0;
+        border-bottom: 0;
       }
     }
   }
@@ -72,12 +81,12 @@
       border-width: 8px 8px 0 8px;
       border-color: #30bc55 transparent transparent transparent;
       top: 17px;
-      right: -5px;
+      right: 8px;
       z-index: 1;
     }
   }
 
-  .header_bottom {
+  &_bottom {
     padding: 15px 0;
     .logo-list {
       display: flex;
@@ -89,4 +98,51 @@
       }
     }
   }
+}
+
+@include respond-to($sm){
+  .header {
+    &_top {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      .logo-site{
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &_bottom{
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+
+  }
+}
+
+@include respond-to($xxs){
+  .header{
+    &_top {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      .logo-site {
+        max-width: 125px;
+      }
+    }
+    &_bottom{
+      padding-bottom: 5px;
+      padding-top: 5px;
+    }
+  }
+}
+
+@media all and(max-width: 420px){
+  .header{
+    .dropdown{
+      font-size: 17px;
+    }
+    .drop-btn:before{
+      top: 12px;
+      right: 17px;
+    }
+  }
+
 }

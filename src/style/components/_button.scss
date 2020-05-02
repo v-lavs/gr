@@ -48,3 +48,10 @@
   margin: auto;
 }
 
+@include respond-to($xxs){
+  .btn_round{
+    height: 55px;
+    width: 55px;
+  }
+}
+
