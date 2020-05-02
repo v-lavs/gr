@@ -4,7 +4,6 @@
 
 //= include ../lib/jquery-3.3.1.min.js
 //= include ../lib/jquery-nice-select-1.1.0/js/jquery.nice-select.js
-//= include ../../node_modules/clip-path-polyfill/clip-path-polyfill.js
 
 
 /**
