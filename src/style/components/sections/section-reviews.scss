@@ -19,10 +19,8 @@
 
   .block-reviews {
     position: relative;
-    padding-left: 95px;
     color: $white;
-    padding-bottom: 55px;
-    padding-top: 45px;
+    padding: 45px 40px 55px 95px;
     background-color: #30bc55;
     background-repeat: no-repeat;
     background-position: right -40.6% bottom;
@@ -44,19 +42,20 @@
   }
 
   .slogan {
-    width: 90%;
-    height: 90px;
+    width: 100%;
+    max-width: 90%;
     font-family: $secondary-font;
     font-size: 44px;
     font-weight: 600;
     line-height: 1.07;
-    margin-left: 66px;
+    padding-left: 7%;
     margin-bottom: 30px;
   }
 
   .wrap-avatar {
     height: 60px;
     width: 60px;
+    flex-shrink: 0;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 25px;
@@ -69,8 +68,10 @@
   }
 
   .link-bay-now {
-    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
     position: relative;
+    text-transform: uppercase;
     color: inherit;
     font-family: $secondary-font;
     font-size: 21px;
@@ -84,12 +85,9 @@
       text-decoration: underline;
     }
 
-    &:before {
-      position: absolute;
+    &:after {
       content: '';
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
+      margin-left: 25px;
       display: block;
       width: 0;
       height: 0;
@@ -112,10 +110,12 @@
         font-size: 19px;
         font-weight: 600;
       }
-      .name{
+
+      .name {
         font-weight: 600;
       }
-      .car-brand{
+
+      .car-brand {
         font-weight: 500;
       }
     }
@@ -144,9 +144,9 @@
   }
 
   .slider-reviews {
-    height: 340px;
-    width: 65%;
-    margin-left: 125px;
+    //height: 340px;
+    padding-left: 13.5%;
+    padding-right: 40px;
   }
 
   .slide-text {
@@ -180,6 +180,88 @@
   .section-reviews {
     .slogan {
       font-size: 38px;
+    }
+  }
+}
+
+@include respond-to($lg) {
+  .section-reviews {
+    .slogan {
+      max-width: 100%;
+      font-size: 32px;
+    }
+
+    .block-reviews {
+      &:before {
+        left: 75px;
+      }
+
+      padding-left: 75px;
+    }
+
+    .reviews-pagination {
+      left: -60px;
+    }
+
+    .left-content {
+      width: 70%;
+      flex-shrink: 0;
+    }
+  }
+}
+
+@include respond-to($md) {
+  .section-reviews {
+
+  }
+}
+
+@include respond-to($sm) {
+  .section-reviews {
+    padding-top: 0;
+
+    .slogan {
+      width: 80%;
+      padding-left: 30px;
+      font-size: 26px;
+    }
+
+    .left-content {
+      padding-top: 0;
+    }
+
+    .right-content {
+      display: none;
+    }
+
+    .left-content {
+      width: 100%;
+    }
+
+    .slider-reviews {
+      padding-right: 0;
+      padding-left: 30px;
+    }
+
+    .block-reviews {
+      padding-left: 65px;
+
+      &:before {
+        left: 65px;
+      }
+    }
+
+    .link-bay-now {
+      margin-left: 30px;
+    }
+
+  }
+}
+
+@include respond-to($md) {
+  .section-reviews {
+    .slogan {
+      width: 100%;
     }
   }
 }

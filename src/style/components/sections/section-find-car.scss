@@ -64,10 +64,13 @@
     z-index: 2;
 
     svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: 43px;
       height: 45px;
       display: block;
-      margin: auto;
     }
 
     &:hover,
@@ -100,14 +103,25 @@
       padding: 80px 0;
     }
 
+    .section__text {
+      font-size: 18px;
+    }
+
     .content-section {
-      padding-right: 30px;
+      padding-right: 45px;
       width: 55%;
       flex-shrink: 0;
     }
+
+    .btn_choose svg {
+      width: 36px;
+      height: 36px;
+    }
+
     .section__title {
       max-width: none;
     }
+
     .container {
       display: flex;
       align-items: center;
@@ -133,12 +147,12 @@
 
     .wrap-select,
     .btn_choose {
-      height: 80px;
+      height: 65px;
     }
 
     .btn_choose {
       width: 100%;
-        -webkit-border-radius: 0;
+      -webkit-border-radius: 0;
       -moz-border-radius: 0;
       border-radius: 0 0 10px 10px;
     }
@@ -150,11 +164,18 @@
   }
 }
 
+@include respond-to($sm) {
+  .section-find-car {
+    padding-top: 0;
+  }
+}
+
 @include respond-to($xs) {
   .section-find-car {
     .container {
       display: block;
     }
+
     .content-section {
       width: 90%;
       padding-right: 0;

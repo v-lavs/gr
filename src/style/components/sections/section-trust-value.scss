@@ -108,3 +108,23 @@
     }
   }
 }
+
+@include respond-to($xs) {
+  .section-trust-value {
+    .content-section {
+      width: 75%;
+      margin: auto;
+      text-align: center;
+    }
+
+    .section__title,
+    .value-list {
+      width: 100%;
+      max-width: none;
+    }
+
+    .section__text {
+      max-width: none;
+    }
+  }
+}

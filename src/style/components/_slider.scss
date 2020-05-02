@@ -1,10 +1,8 @@
 .swiper-pagination {
+  position: relative;
   padding: 0 74px 6px;
 }
 
-.swiper-pagination {
-  position: relative;
-}
 .swiper-pagination-bullet {
   background-color: #ebebeb;
   opacity: 1;
@@ -45,3 +43,9 @@
   }
 }
 
+@include respond-to($lg) {
+  .swiper-pagination {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}

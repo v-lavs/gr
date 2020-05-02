@@ -11,7 +11,7 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    margin: 165px 0;
+    margin: 165px 0 0;
 
     &:before {
       position: absolute;
@@ -85,7 +85,6 @@
     color: #4b4b4b;
     font-size: 22px;
     font-weight: 600;
-    flex-wrap: wrap;
     margin-bottom: 50px;
 
     & > * {
@@ -110,16 +109,21 @@
 
 @include respond-to($screen-md) {
   .section-advantages {
-    padding-bottom: 100px;
-
     .block-advantages {
       margin-bottom: 100px;
+    }
+
+    .condition {
+      flex-wrap: wrap;
     }
   }
 }
 
 @include respond-to($md) {
   .section-advantages {
+    .block-advantages {
+      margin-top: 80px;
+    }
     .left-content {
       padding-right: 7%;
     }
@@ -127,11 +131,39 @@
     .right-content {
       padding-left: 7%;
     }
+  }
+}
 
-    //.left-content,
-    //.right-content {
-    //  width: 100%;
-    //  padding: 0;
-    //}
+
+@include respond-to($xs) {
+  .section-advantages {
+    .left-content,
+    .right-content {
+      width: 100%;
+      padding: 0;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .left-content {
+      margin-bottom: 80px;
+      padding-bottom: 80px;
+      border-bottom: 2px solid #cfcfcf;
+    }
+
+    .advantages-card {
+      max-width: none;
+    }
+
+    .block-advantages {
+      &:before {
+        display: none;
+      }
+    }
+
+    .block__footer {
+      padding-top: 40px;
+    }
   }
 }

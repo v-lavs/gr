@@ -218,21 +218,36 @@ $(document).ready(function () {
                 el: '#popularBrandsPagination .swiper-pagination',
             },
             breakpoints: {
-                640: {
+                0: {
+                    slidesPerView: 2,
+                    spaceBetween:20
+                },
+                768: {
                     slidesPerView: 1,
+                    spaceBetween: 10
                 },
                 1050: {
                     slidesPerView: 2,
+                    spaceBetween: 0
                 },
-                1150: {
+                1381: {
                     slidesPerView: 3,
                 }
             }
         });
     }
 
+    function setSlideHeight() {
+        var $slides = $('.slider-reviews .swiper-slide');
+        var heightArr = $slides.map(function (index) {
+            return $(this).find('.card-review').height();
+        });
+        var maxSlideHeight = Math.round(Math.max.apply(Math, heightArr));
+        $('.slider-reviews').css({height: maxSlideHeight});
+    }
+    setSlideHeight();
 
-    var swiperReviews = new Swiper('.slider-reviews', {
+    var reviewSettings = {
         direction: 'vertical',
         navigation: {
             nextEl: '#reviewsPagination  .swiper-button-next',
@@ -242,7 +257,10 @@ $(document).ready(function () {
             el: '#reviewsPagination .swiper-pagination',
             clickable: true,
         },
-    });
+        slidesPerView: 1,
+        observeParents: true
+    };
+    var swiperReviews = new Swiper('.slider-reviews', reviewSettings);
 
     /**
      * CUSTOM SELECT
@@ -270,12 +288,16 @@ $(document).ready(function () {
 
     var windowW = $(window).width();
 
-    $(window).on('resize', function () {
+    $(window).on('resize orientationchange', function () {
         var resizedWindowWidth = $(window).width();
 
         if (windowW !== resizedWindowWidth) {
+            swiperReviews.destroy(true, false);
+            swiperReviews = new Swiper('.slider-reviews', reviewSettings);
+
             windowW = resizedWindowWidth;
             setEqualHeight();
+            setSlideHeight();
         }
     })
 });

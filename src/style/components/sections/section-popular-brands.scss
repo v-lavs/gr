@@ -146,10 +146,10 @@
 
       .img-car {
         position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
+        left: 50%;
+        top:50%;
+        max-width: 100%;
+        transform: translate(-50%, -50%);
         z-index: 2;
       }
     }
@@ -177,6 +177,66 @@
 
     .block-view-brands {
       width: 60%;
+      padding-left: 10px;
+    }
+
+  }
+}
+
+@include respond-to($md) {
+  .section-popular-brands {
+    .swiper-slide {
+      padding: 0;
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .section-popular-brands {
+    .container-default {
+      flex-wrap: wrap;
+    }
+
+    .swiper-container {
+      -webkit-transform: none;
+      -moz-transform: none;
+      -ms-transform: none;
+      -o-transform: none;
+      transform: none;
+      padding: 0;
+    }
+
+    .card {
+      max-width: 350px;
+      padding: 15px;
+      .bg-logo-brand {
+        margin-bottom: 20px;
+      }
+
+      .wrap-img {
+        margin-bottom: 45px;
+      }
+    }
+
+    .swiper-container-initialized {
+      .card {
+        margin-left: 0;
+      }
+    }
+
+
+    .content-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .block-view-brands {
+      width: 100%;
+      max-width: none;
+      padding: 0;
     }
   }
 }
