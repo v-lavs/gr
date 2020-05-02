@@ -41,7 +41,7 @@
   .content-section {
     width: 465px;
     flex-shrink: 0;
-    padding: 0 55px 045px;
+    padding: 0 55px 45px;
   }
 
   .link-show-brands {
@@ -52,8 +52,9 @@
     font-weight: 600;
     padding-right: 25px;
     transition: .35s;
+
     &:hover,
-    &:focus{
+    &:focus {
       text-decoration: underline;
     }
 
@@ -123,8 +124,9 @@
       font-size: 15px;
       font-weight: 500;
       transition: .35s;
+
       &:hover,
-      &:focus{
+      &:focus {
         text-decoration: underline;
       }
     }
@@ -147,7 +149,7 @@
       .img-car {
         position: absolute;
         left: 50%;
-        top:50%;
+        top: 50%;
         max-width: 100%;
         transform: translate(-50%, -50%);
         z-index: 2;
@@ -206,9 +208,15 @@
       padding: 0;
     }
 
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
+
     .card {
       max-width: 350px;
       padding: 15px;
+
       .bg-logo-brand {
         margin-bottom: 20px;
       }
@@ -231,12 +239,25 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
+      padding-bottom: 15px;
     }
 
     .block-view-brands {
       width: 100%;
       max-width: none;
       padding: 0;
+    }
+  }
+}
+
+@media all and (max-width: 380px) {
+  .section-popular-brands {
+    .card__title {
+      font-size: 20px;
+    }
+
+    .card__link {
+      font-size: 13px;
     }
   }
 }

@@ -27,7 +27,7 @@ $(document).ready(function () {
             breakpoints: {
                 0: {
                     slidesPerView: 2,
-                    spaceBetween:20
+                    spaceBetween: 20
                 },
                 768: {
                     slidesPerView: 1,
@@ -52,10 +52,11 @@ $(document).ready(function () {
         var maxSlideHeight = Math.round(Math.max.apply(Math, heightArr));
         $('.slider-reviews').css({height: maxSlideHeight});
     }
+
     setSlideHeight();
 
     var reviewSettings = {
-        direction: 'vertical',
+        // direction: 'vertical',
         navigation: {
             nextEl: '#reviewsPagination  .swiper-button-next',
             prevEl: '#reviewsPagination  .swiper-button-prev',
@@ -65,7 +66,25 @@ $(document).ready(function () {
             clickable: true,
         },
         slidesPerView: 1,
-        observeParents: true
+        observeParents: true,
+        breakpoints: {
+            0: {
+                direction: 'horizontal',
+                slidesPerView: 1,
+                spaceBetween: 30,
+                autoHeight: true,
+            },
+            580: {
+                direction: 'vertical',
+                slidesPerView: 1,
+                spaceBetween: 100,
+                autoHeight: true,
+            },
+            1920: {
+                direction: 'vertical',
+                spaceBetween: 100,
+            }
+        }
     };
     var swiperReviews = new Swiper('.slider-reviews', reviewSettings);
 

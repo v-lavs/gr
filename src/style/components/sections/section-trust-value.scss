@@ -121,10 +121,29 @@
     .value-list {
       width: 100%;
       max-width: none;
+      &__item{
+        padding: 0 15px;
+      }
     }
+
 
     .section__text {
       max-width: none;
+    }
+  }
+}
+
+@media all and (max-width: 480px){
+  .section-trust-value{
+    .content-section{
+      width: 90%;
+    }
+    .value-list__item{
+      width: 100%;
+      padding: 0;
+      &:before{
+        display: none;
+      }
     }
   }
 }

@@ -210,12 +210,6 @@
   }
 }
 
-@include respond-to($md) {
-  .section-reviews {
-
-  }
-}
-
 @include respond-to($sm) {
   .section-reviews {
     padding-top: 0;
@@ -261,6 +255,32 @@
   .section-reviews {
     .slogan {
       width: 100%;
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .section-reviews{
+    .slogan{
+      font-size: 24px;
+    }
+    .swiper-container.slider-reviews{
+
+    }
+  }
+}
+
+@media all and (max-width: 480px){
+  .section-reviews{
+    .block-reviews{
+      padding-left: 10px;
+      padding-right: 10px;
+      &:before{
+        display: none;
+      }
+    }
+    .reviews-pagination{
+      display: none;
     }
   }
 }

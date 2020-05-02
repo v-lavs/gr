@@ -50,6 +50,10 @@
 
     a {
       display: inline-block;
+      padding-bottom: 10px;
+      &:last-child{
+        padding-bottom: 0;
+      }
     }
   }
 

@@ -124,6 +124,7 @@
     .block-advantages {
       margin-top: 80px;
     }
+
     .left-content {
       padding-right: 7%;
     }
@@ -134,9 +135,11 @@
   }
 }
 
-
 @include respond-to($xs) {
   .section-advantages {
+    padding-bottom: 80px;
+    padding-top: 40px;
+
     .left-content,
     .right-content {
       width: 100%;
@@ -156,7 +159,13 @@
       max-width: none;
     }
 
+    .section__title{
+      font-size: 35px;
+      margin-bottom: 45px;
+    }
+
     .block-advantages {
+      margin-top: 45px;
       &:before {
         display: none;
       }
@@ -164,6 +173,16 @@
 
     .block__footer {
       padding-top: 40px;
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .section-advantages {
+    padding-bottom: 0;
+    .left-content {
+      margin-bottom: 70px;
+      padding-bottom: 75px;
     }
   }
 }
