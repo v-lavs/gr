@@ -60,6 +60,23 @@
       font-size: 17px;
       font-weight: 300;
       line-height: 1.35;
+
+      ul li {
+        position: relative;
+        padding-left: 12px;
+
+        &:before {
+          position: absolute;
+          content: '-';
+          display: inline-block;
+          font-size: inherit;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          color: inherit;
+          z-index: 2;
+        }
+      }
     }
   }
 
@@ -72,8 +89,8 @@
     margin-bottom: 50px;
 
     & > * {
-    margin-bottom: 25px;
-  }
+      margin-bottom: 25px;
+    }
 
     .green-color {
       font-size: 35px;
