@@ -78,7 +78,6 @@ $(document).ready(function () {
                 direction: 'vertical',
                 slidesPerView: 1,
                 spaceBetween: 100,
-                autoHeight: true,
             },
             1920: {
                 direction: 'vertical',
@@ -86,6 +85,7 @@ $(document).ready(function () {
             }
         }
     };
+
     var swiperReviews = new Swiper('.slider-reviews', reviewSettings);
 
     /**
@@ -99,7 +99,6 @@ $(document).ready(function () {
      **/
 
     function setEqualHeight() {
-
         var max_card_height = 0;
         var $advantagesCards = $('.advantages-card');
         $advantagesCards.each(function () {
@@ -118,12 +117,18 @@ $(document).ready(function () {
         var resizedWindowWidth = $(window).width();
 
         if (windowW !== resizedWindowWidth) {
-            swiperReviews.destroy(true, false);
-            swiperReviews = new Swiper('.slider-reviews', reviewSettings);
+            swiperReviews.destroy(true, true);
 
             windowW = resizedWindowWidth;
+            if (resizedWindowWidth > 580) {
+                setSlideHeight();
+            } else {
+                $('.slider-reviews').css({height: ''})
+            }
+
+            swiperReviews = new Swiper('.slider-reviews', reviewSettings);
+
             setEqualHeight();
-            setSlideHeight();
         }
     })
 });

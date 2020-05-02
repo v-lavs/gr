@@ -208,14 +208,14 @@
       }
 
       &:hover {
-        &:before {
-          -webkit-transform: translate(-100%, -50%);
-          -moz-transform: translate(-100%, -50%);
-          -ms-transform: translate(-100%, -50%);
-          -o-transform: translate(-100%, -50%);
-          transform: translate(-100%, -50%);
-        }
-      }
+         &:before {
+           -webkit-transform: translate(-100%, -50%);
+           -moz-transform: translate(-100%, -50%);
+           -ms-transform: translate(-100%, -50%);
+           -o-transform: translate(-100%, -50%);
+           transform: translate(-100%, -50%);
+         }
+       }
 
       .banner-category {
         left: -10%;
