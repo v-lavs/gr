@@ -103,6 +103,14 @@
       .name,
       .car-brand {
         display: block;
+        font-size: 19px;
+        font-weight: 600;
+      }
+      .name{
+        font-weight: 600;
+      }
+      .car-brand{
+        font-weight: 500;
       }
     }
 
@@ -111,6 +119,7 @@
       font-family: $secondary-font;
       font-size: 17px;
       line-height: 1.23;
+      font-weight: 300;
     }
   }
 
@@ -142,7 +151,7 @@
     position: absolute;
     left: -74px;
     top: 50%;
-    transform: translateY(-50%) rotate(90deg);
+    transform: rotate(90deg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,7 +170,7 @@
   }
 }
 
-@media all and (max-width: 1465px) {
+@include respond-to($screen-md) {
   .section-reviews {
     .slogan {
       font-size: 38px;

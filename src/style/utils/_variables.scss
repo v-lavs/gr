@@ -31,11 +31,12 @@ $light-gray: #cccccc;
 * Breakpoints
 */
 
-$xs: '(max-width: 580px)';
-$sm: '(max-width: 767px)';
-$md: '(max-width: 991px)';
-$lg: '(max-width: 1250)';
-$xl: '(max-width: 1920)';
+$xxs: '(max-width: 580px)';
+$xs: '(max-width: 767px)';
+$sm: '(max-width: 991px)';
+$md: '(max-width: 1050px)';
+$lg: '(max-width: 1240px)';
+$screen-md: '(max-width: 1480px)';
 
 
 

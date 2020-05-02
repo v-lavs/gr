@@ -75,7 +75,7 @@
   }
 }
 
-@media all and(max-width: 990px) {
+@include respond-to($md) {
   .footer {
     .block-list {
       width: 50%;

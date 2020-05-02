@@ -1,38 +1,37 @@
 
-
 .container {
   max-width: 1610px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-@media all and (max-width: 1465px) {
+@include respond-to($screen-md) {
   .container {
     max-width: 1240px;
   }
 }
 
-@media all and (max-width: 1240px) {
+@include respond-to($lg) {
   .container {
     max-width: 1050px;
   }
 }
 
-@media all and (max-width: 1051px) {
+@include respond-to($md) {
   .container {
     max-width: 767px;
   }
 }
 
-@media all and (max-width: 768px) {
+@include respond-to($sm) {
   .container {
     max-width: 680px;
   }
 }
 
-@media all and (max-width: 580px) {
+@include respond-to($xs) {
   .container {
-    max-width: 480px;
+    max-width: 580px;
   }
 }
 

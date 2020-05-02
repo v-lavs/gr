@@ -49,7 +49,7 @@
   }
 }
 
-@media all and (max-width: 580px) {
+@include respond-to($xxs) {
   .text {
     &_xl {
       //font-size: 30px;

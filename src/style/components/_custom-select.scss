@@ -46,6 +46,6 @@
   }
 }
 
-@media all and (max-width: 1465px) {
+@include respond-to($screen-md) {
 
 }

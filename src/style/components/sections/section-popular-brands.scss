@@ -29,7 +29,7 @@
       position: relative;
     }
   }
-  
+
   .swiper-container {
     -webkit-transform: translateX(20px);
     -moz-transform: translateX(20px);
@@ -90,6 +90,7 @@
     .swiper-wrapper {
       justify-content: space-between;
     }
+
     .swiper-slide {
       max-width: 350px;
       flex-grow: 1;
@@ -145,23 +146,27 @@
   }
 }
 
-@media all and (max-width: 1465px) {
+@include respond-to($screen-md) {
   .section-popular-brands {
-   .content-section {
-     padding-right: 15px;
-     padding-left: 20px;
-   }
-    .brands-pagination{
+    .content-section {
+      padding-right: 15px;
+      padding-left: 20px;
+    }
+
+    .brands-pagination {
       padding-top: 40px;
     }
   }
 }
 
-@media all and (max-width: 1240px) {
-  .content-section{
-    width: 40%;
-  }
-  .block-view-brands{
-    width: 60%;
+@include respond-to($lg) {
+  .section-popular-brands {
+    .content-section {
+      width: 40%;
+    }
+
+    .block-view-brands {
+      width: 60%;
+    }
   }
 }

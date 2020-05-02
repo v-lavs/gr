@@ -62,23 +62,108 @@
     padding: 20px;
     position: relative;
     z-index: 2;
-    svg{
+
+    svg {
       width: 43px;
       height: 45px;
       display: block;
       margin: auto;
     }
+
     &:hover,
-    &:focus{
-      svg{
+    &:focus {
+      svg {
         fill: $light-green-200;
       }
     }
   }
 }
 
-@media all and (max-width: 1465px) {
+@include respond-to($screen-md) {
   .section-find-car {
     padding-bottom: 60px;
+  }
+}
+
+@include respond-to($lg) {
+  .section-find-car {
+    .wrap-select {
+      padding-left: 0;
+    }
+  }
+}
+
+
+@include respond-to($md) {
+  .section-find-car {
+    .bg-section {
+      padding: 80px 0;
+    }
+
+    .content-section {
+      padding-right: 30px;
+      width: 55%;
+      flex-shrink: 0;
+    }
+    .section__title {
+      max-width: none;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .form-choose {
+    flex-direction: column;
+    max-width: 420px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    .wrap-select {
+      width: 100%;
+      border-bottom: 1px solid #ddd;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+
+    .wrap-select,
+    .btn_choose {
+      height: 80px;
+    }
+
+    .btn_choose {
+      width: 100%;
+        -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .nice-select {
+      justify-content: space-between;
+      border-radius: 0;
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .section-find-car {
+    .container {
+      display: block;
+    }
+    .content-section {
+      width: 90%;
+      padding-right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
   }
 }
