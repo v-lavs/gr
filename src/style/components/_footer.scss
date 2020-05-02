@@ -47,6 +47,15 @@
     &__item {
       margin-bottom: 20px;
     }
+    &__link {
+      display: inline-block;
+      transition: .35s;
+
+      &:hover,
+      &:focus {
+        color: rgba(255, 254, 254, 1);
+      }
+    }
   }
 
   .menu-info {

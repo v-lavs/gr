@@ -23,12 +23,12 @@
 
     }
     &:before{
-      left: 52%;
-      transform: rotate(-48deg);
+      left: 50%;
+      transform: rotate(-45deg);
     }
     &:after{
-      left: 48%;
-      transform: rotate(48deg);
+      left: 50%;
+      transform: rotate(45deg);
     }
 
   }
@@ -45,22 +45,26 @@
     }
 
   .side1 {
-    clip-path: polygon(25% 0, 51% 50%, 25% 100%, 0 100%, 0 0);
+    //clip-path: polygon(25% 0, 51% 50%, 25% 100%, 0 100%, 0 0);
+    clip-path: polygon(25.5% 0, 50.2% 53.5%, 29% 100%, 0 100%, 0 0);
     transform: translateX(-25%);
   }
 
   .side2 {
-    clip-path: polygon(50% 50%, 25% 0, 75% 0);
+    //clip-path: polygon(50% 50%, 25% 0, 75% 0);
+    clip-path: polygon(50.1% 53.5%, 25.5% 0, 74.5% 0);
     transform: translateY(-25%);
   }
 
   .side3 {
-    clip-path: polygon(75% 0, 49% 50%, 75% 100%, 100% 100%, 100% 0);
+    //clip-path: polygon(75% 0, 49% 50%, 75% 100%, 100% 100%, 100% 0);
+    clip-path: polygon(74.5% 0, 50% 53.7%, 71.2% 100%, 100% 100%, 100% 0);
     transform: translateX(25%);
   }
 
   .side4 {
-    clip-path: polygon(50% 50%, 25% 100%, 75% 100%);
+    //clip-path: polygon(50% 50.5%, 27.2% 100%, 72.8% 100%);
+    clip-path:polygon(50.1% 53.5%, 29% 100%, 71.2% 100%);
     transform: translateY(25%);
   }
 }
@@ -89,7 +93,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 270px;
+  //  max-width: 270px;
     color: #ffffff;
     font-family: $secondary-font;
     font-size: 13px;

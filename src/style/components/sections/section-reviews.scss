@@ -75,8 +75,12 @@
     font-family: $secondary-font;
     font-size: 21px;
     font-weight: 600;
-    padding-right: 25px;
-    margin-left: 125px;
+    padding-top: 40px;
+    transition: .35s;
+    &:hover,
+    &:focus{
+      text-decoration: underline;
+    }
 
     &:before {
       position: absolute;

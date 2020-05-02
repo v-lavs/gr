@@ -51,6 +51,11 @@
     font-size: 21px;
     font-weight: 600;
     padding-right: 25px;
+    transition: .35s;
+    &:hover,
+    &:focus{
+      text-decoration: underline;
+    }
 
     &:before {
       position: absolute;
@@ -117,6 +122,11 @@
       font-family: $secondary-font;
       font-size: 15px;
       font-weight: 500;
+      transition: .35s;
+      &:hover,
+      &:focus{
+        text-decoration: underline;
+      }
     }
 
     .bg-logo-brand {
