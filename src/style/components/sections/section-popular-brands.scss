@@ -1,3 +1,17 @@
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .section-popular-brands {
+    .swiper-container-initialized {
+      .swiper-slide {
+        width: 320px;
+      }
+      .card {
+        margin-left: 40px!important;
+      }
+    }
+  }
+}
+
 .section-popular-brands {
   padding-bottom: 110px;
 

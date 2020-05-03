@@ -85,7 +85,6 @@ $(document).ready(function () {
             }
         }
     };
-
     var swiperReviews = new Swiper('.slider-reviews', reviewSettings);
 
     /**
@@ -106,7 +105,7 @@ $(document).ready(function () {
                 max_card_height = $(this).height(); // то она сама становится новой максимальной высотой
             }
         });
-        $advantagesCards.css({minHeight: max_card_height}); // устанавливаем высоту каждой колонки равной значению максимальной высоты
+        $advantagesCards.css({minHeight: $(window).width() > 767 ? max_card_height : 'auto'}); // устанавливаем высоту каждой колонки равной значению максимальной высоты
     }
 
     setEqualHeight();

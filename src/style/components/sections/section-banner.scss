@@ -6,35 +6,16 @@
     display: flex;
     justify-content: center;
     position: relative;
-    padding-top: 80px;
-    padding-bottom: 20px;
-
-    &:before,
-    &:after {
-      position: absolute;
-      content: '';
-      display: block;
-      width: 2px;
-      bottom: -100%;
-      top: -100%;
-      z-index: 3;
-
-      -webkit-transform-origin: center;
-      -moz-transform-origin: center;
-      -ms-transform-origin: center;
-      -o-transform-origin: center;
-      transform-origin: center;
-      margin-top: 60px;
-
-      background-color: $white;
-    }
+    height: 80vh;
 
     &:before {
+      display: none;
       left: 50%;
       transform: rotate(-45deg);
     }
 
     &:after {
+      display: none;
       left: 50%;
       transform: rotate(45deg);
     }
@@ -83,31 +64,42 @@
   }
 
   .link {
-    position: absolute;
+    position: relative;
     display: flex;
-    bottom: 50%;
-    left: 50%;
-    max-width: 460px;
-    width: 50%;
     padding: 20px;
+    overflow: hidden;
     z-index: 1;
 
     &:hover,
     &:focus {
-      .banner-category__title{
+      .banner-category__title {
         color: #fff;
+      }
+
+      &:before {
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -o-transform: scale(1, 1);
+        transform: scale(1, 1);
       }
     }
 
     &:before {
       content: '';
       position: absolute;
-      left: 50%;
-      bottom: 0;
-      display: none;
-      width: 0;
-      height: 0;
-      border-style: solid;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      top: 20px;
+      background-color: rgba(0, 128, 0, 0.6);
+
+      -webkit-transform: scale(0);
+      -moz-transform: scale(0);
+      -ms-transform: scale(0);
+      -o-transform: scale(0);
+      transform: scale(0);
+
       -webkit-transition: transform .45s;
       -moz-transition: transform .45s;
       -ms-transition: transform .45s;
@@ -119,160 +111,91 @@
     }
 
     &_top {
-      -webkit-transform: translate(-50%, 0);
-      -moz-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-      -o-transform: translate(-50%, 0);
-      transform: translate(-50%, 0);
-
-      &:before {
-        display: block;
-        border-width: 100vw 100vw 0 100vw;
-        border-color: rgba(3, 150, 66, 0.6) transparent transparent transparent;
-        -webkit-transform: translate(-50%, -100%);
-        -moz-transform: translate(-50%, -100%);
-        -ms-transform: translate(-50%, -100%);
-        -o-transform: translate(-50%, -100%);
-        transform: translate(-50%, -100%);
-
-        margin-bottom: 30px;
-      }
-
-      &:hover {
-        &:before {
-          -webkit-transform: translate(-50%, 0);
-          -moz-transform: translate(-50%, 0);
-          -ms-transform: translate(-50%, 0);
-          -o-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-        }
-      }
-
       .banner-category {
-        top: -10%;
+        left: 0;
+        bottom: 0;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        -webkit-transform: rotate(45deg) translate(-1%, 21%);
+        transform: rotate(45deg) translate(-1%, 21%);
+      }
+      .inner {
+        padding-top: 10vh;
+        padding-bottom: 20vh;
       }
     }
 
     &_bottom {
-      -webkit-transform: translate(-50%, 100%);
-      -moz-transform: translate(-50%, 100%);
-      -ms-transform: translate(-50%, 100%);
-      -o-transform: translate(-50%, 100%);
-      transform: translate(-50%, 100%);
-
-      &:before {
+      .banner-category {
+        right: 0;
         top: 0;
-        display: block;
-        -webkit-transform: translate(-50%, 100%);
-        -moz-transform: translate(-50%, 100%);
-        -ms-transform: translate(-50%, 100%);
-        -o-transform: translate(-50%, 100%);
-        transform: translate(-50%, 100%);
-        border-width: 0 100vw 100vw 100vw;
-        border-color: transparent transparent rgba(3, 150, 66, 0.6) transparent;
-        margin-top: 30px;
+        -webkit-transform: rotate(45deg) translate(-1%, -21%);
+        transform: rotate(45deg) translate(-1%, -21%);
       }
-
-      &:hover {
-        &:before {
-          -webkit-transform: translate(-50%, 0);
-          -moz-transform: translate(-50%, 0);
-          -ms-transform: translate(-50%, 0);
-          -o-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-        }
-      }
-      .banner-category {
-        top: 10%;
+      .inner {
+        padding-top: 15vh;
       }
     }
 
     &_left {
-      -webkit-transform: translate(-100%, 50%);
-      -moz-transform: translate(-100%, 50%);
-      -ms-transform: translate(-100%, 50%);
-      -o-transform: translate(-100%, 50%);
-      transform: translate(-100%, 50%);
-
-      &:before {
-        top: 50%;
-        left: 100%;
-        display: block;
-        border-width: 100vw 0 100vw 100vw;
-        border-color: transparent transparent transparent rgba(3, 150, 66, 0.6);
-
-        -webkit-transform: translate(-200%, -50%);
-        -moz-transform: translate(-200%, -50%);
-        -ms-transform: translate(-200%, -50%);
-        -o-transform: translate(-200%, -50%);
-        transform: translate(-200%, -50%);
-        margin-left: -30px;
-      }
-
-      &:hover {
-         &:before {
-           -webkit-transform: translate(-100%, -50%);
-           -moz-transform: translate(-100%, -50%);
-           -ms-transform: translate(-100%, -50%);
-           -o-transform: translate(-100%, -50%);
-           transform: translate(-100%, -50%);
-         }
-       }
-
       .banner-category {
-        left: -10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        right: 0;
+        bottom: 0;
+        -webkit-transform: rotate(45deg) translate(21%, 1%);
+        transform: rotate(45deg) translate(21%, 1%);
+      }
+      .inner {
+        padding-right: 15vh;
+        padding-left: 15vw;
       }
     }
-
     &_right {
-      -webkit-transform: translate(0%, 50%);
-      -moz-transform: translate(0%, 50%);
-      -ms-transform: translate(0%, 50%);
-      -o-transform: translate(0%, 50%);
-      transform: translate(0%, 50%);
-
-      &:before {
-        top: 50%;
-        left: 0%;
-        display: block;
-
-        border-width: 100vw 100vw 100vw 0;
-        border-color: transparent rgba(3, 150, 66, 0.6) transparent transparent;
-
-        -webkit-transform: translate(100%, -50%);
-        -moz-transform: translate(100%, -50%);
-        -ms-transform: translate(100%, -50%);
-        -o-transform: translate(100%, -50%);
-        transform: translate(100%, -50%);
-        margin-left: 30px;
-      }
-
-      &:hover {
-        &:before {
-          -webkit-transform: translate(0, -50%);
-          -moz-transform: translate(0, -50%);
-          -ms-transform: translate(0, -50%);
-          -o-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-        }
-      }
-
       .banner-category {
-        left: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        left: 0;
+        top: 0;
+        -webkit-transform: rotate(45deg) translate(-21%, 1%);
+        transform: rotate(45deg) translate(-21%, 1%);
       }
-    }
+      .inner {
+        padding-left: 15vh;
+        padding-right: 15vw;
 
-    &_right,
-    &_left {
-      align-items: center;
+      }
     }
   }
 }
 
 .banner-category {
-  position: relative;
-  width: 100%;
+  position: absolute;
   text-align: center;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  height: 50%;
+  width: 50%;
+
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
+  -ms-transform-origin: center;
+  -o-transform-origin: center;
+  transform-origin: center;
+  z-index: 3;
+
+  .inner {
+    max-height: 40vh;
+  }
 
   &__text {
     color: #ffffff;
@@ -287,7 +210,7 @@
     margin-bottom: 0;
     position: relative;
     font-size: 80px;
-    line-height: 1.2;
+    line-height: 1;
     color: #fff;
     z-index: 5;
 
@@ -298,25 +221,62 @@
   }
 }
 
-.section-grid {
+.section-grid-wrap {
   position: relative;
   z-index: 5;
   justify-content: space-around;
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  width: 75%;
-  height: 80vh;
+  width: 100%;
+  height: 100%;
+
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 
   .link {
-    height: 40%;
+    width: 50%;
+    height: 50%;
+    border: 2px solid #fff;
+  }
+}
+
+.section-grid {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  z-index: 1;
+
+  @media all and (orientation: landscape) {
+    width: 200vw;
+    height: 200vw;
+  }
+  @media all and (orientation: portrait) {
+    width: 200vh;
+    height: 200vh;
   }
 }
 
 @include respond-to($md) {
   .section-banner {
-    .section-grid {
+    .container-default {
       height: 50vh;
+    }
+
+    .banner-category .inner {
+      max-height: 25vh;
     }
 
     .banner-category {
@@ -333,21 +293,37 @@
 
 @include respond-to($xs) {
   .section-banner {
-
     .banner-category {
       &__title {
         font-size: 48px;
       }
     }
+
+    .link_bottom {
+      .inner {
+        padding-top: 10vh;
+      }
+    }
+
   }
 }
 
 @media screen and (max-width: 520px) {
   .section-banner {
-    .link_top,
-    .link_bottom {
-      padding-left: 0;
-      padding-right: 0;
+    .link_right {
+      .inner {
+        padding-left: 40px;
+      }
+    }
+    .link_left {
+      .inner {
+        padding-right: 40px;
+      }
+    }
+    .link_top {
+      .inner {
+        padding-bottom: 17vh;
+      }
     }
 
     .banner-category {
