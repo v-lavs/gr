@@ -346,21 +346,31 @@
 
 @include respond-to($xs) {
   .section-banner {
+
+    @media all and (orientation: landscape) {
+      .container-default {
+        min-height: 710px;
+      }
+    }
+
     .banner-category {
       &__title {
         font-size: 48px;
       }
     }
+
     .link_top {
       .inner {
         padding-bottom: 17vh;
       }
     }
+
     .link_bottom {
       .inner {
         padding-top: 12vh;
       }
     }
+
     .link_right {
       .inner {
         padding-left: 13vh;
