@@ -11,6 +11,10 @@
  **/
 
 $(document).ready(function () {
+
+    /**
+     * SLIDER-BRANDS
+     **/
     if ($('.slider-brands .card').length > 3) {
 
         $('#popularBrandsPagination').addClass('brands-pagination_active');
@@ -43,6 +47,10 @@ $(document).ready(function () {
             }
         });
     }
+
+    /**
+     * SLIDER-REVIEWS
+     **/
 
     function setSlideHeight() {
         var $slides = $('.slider-reviews .swiper-slide');
@@ -86,6 +94,26 @@ $(document).ready(function () {
         }
     };
     var swiperReviews = new Swiper('.slider-reviews', reviewSettings);
+
+    /**
+     * SLIDER-LOGO
+     **/
+    if ($(window).outerWidth() <= 767) {
+    var    logoSliderMob = new Swiper('.logo-slider-mob', {
+            breakpoints: {
+                0: {
+                    slidesPerView: 5,
+                    freeMode: true,
+                },
+
+                767: {
+                    slidesPerView: 5,
+                }
+            },
+        });
+    } else {
+        destroySwiper(logoSliderMob);
+    }
 
     /**
      * CUSTOM SELECT
