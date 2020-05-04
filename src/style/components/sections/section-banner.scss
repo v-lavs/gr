@@ -113,12 +113,17 @@
         justify-content: flex-end;
         -webkit-transform: rotate(45deg) translate(-1%, 21%);
         transform: rotate(45deg) translate(-1%, 21%);
+
+        &__text {
+          display: inline-block;
+          max-width: 17vw;
+          margin: 0 auto;
+        }
       }
 
       .inner {
         padding-top: 10vh;
         padding-bottom: 15vh;
-        max-width: 17vw;
         margin-bottom: 30px;
       }
     }
@@ -131,11 +136,16 @@
         justify-content: center;
         -webkit-transform: rotate(45deg) translate(-1%, -21%);
         transform: rotate(45deg) translate(-1%, -21%);
+
+        &__text {
+          display: inline-block;
+          max-width: 17vw;
+          margin: 0 auto;
+        }
       }
 
       .inner {
         padding-top: 15vh;
-        max-width: 17vw;
       }
     }
 
@@ -275,6 +285,24 @@
   }
 }
 
+@media all and (max-width: 1600px) {
+  .section-banner {
+    .link_left .inner,
+    .link_right .inner {
+      max-width: 30vw;
+    }
+  }
+}
+
+@include respond-to($lg) {
+  .section-banner {
+    .link_left .inner,
+    .link_right .inner {
+      max-width: 38vw;
+    }
+  }
+}
+
 @include respond-to($md) {
   .section-banner {
     .container-default {
@@ -289,10 +317,29 @@
       &__title {
         font-size: 60px;
       }
+    }
 
+    .link_bottom .inner {
+      padding-top: 9vh;
+    }
+
+    .link_top .inner {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@include respond-to($sm) {
+  .section-banner {
+    .banner-category {
       &__text {
-        display: none;
+        display: none !important;
       }
+    }
+
+    .link_top .inner {
+      margin-bottom: 0;
+      padding-bottom: 22vh;
     }
   }
 }
@@ -304,10 +351,19 @@
         font-size: 48px;
       }
     }
-
+    .link_top {
+      .inner {
+        padding-bottom: 17vh;
+      }
+    }
     .link_bottom {
       .inner {
-        padding-top: 10vh;
+        padding-top: 12vh;
+      }
+    }
+    .link_right {
+      .inner {
+        padding-left: 13vh;
       }
     }
 
@@ -330,7 +386,7 @@
 
     .link_top {
       .inner {
-        padding-bottom: 17vh;
+        padding-bottom: 15vh;
       }
     }
 
