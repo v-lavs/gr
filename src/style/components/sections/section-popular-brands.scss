@@ -95,17 +95,6 @@
     }
   }
 
-  .slider-brands_static {
-    .swiper-wrapper {
-      justify-content: space-between;
-    }
-
-    .swiper-slide {
-      max-width: 350px;
-      flex-grow: 1;
-    }
-  }
-
   .card {
     max-width: 320px;
     width: 100%;
@@ -193,6 +182,19 @@
     .swiper-slide {
       padding: 0;
     }
+  }
+}
+@include respond-to($sm) {
+  .section-popular-brands {
+    .content-section {
+      width: 45%;
+    }
+
+    .block-view-brands {
+      width: 55%;
+      padding-left: 10px;
+    }
+
   }
 }
 

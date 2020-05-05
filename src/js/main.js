@@ -22,38 +22,43 @@ $(document).ready(function () {
     /**
      * SLIDER-BRANDS
      **/
-    if ($('.slider-brands .card').length > 3) {
-
-        $('#popularBrandsPagination').addClass('brands-pagination_active');
-        $('.slider-brands').removeClass('slider-brands_static');
-
-        var swiperBrands = new Swiper('.slider-brands', {
-            navigation: {
-                nextEl: '#popularBrandsPagination .swiper-button-next',
-                prevEl: '#popularBrandsPagination .swiper-button-prev',
+    var brandsSettings = {
+        navigation: {
+            nextEl: '#popularBrandsPagination .swiper-button-next',
+            prevEl: '#popularBrandsPagination .swiper-button-prev',
+        },
+        pagination: {
+            el: '#popularBrandsPagination .swiper-pagination',
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 2,
+                spaceBetween: 20
             },
-            pagination: {
-                el: '#popularBrandsPagination .swiper-pagination',
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 10
             },
-            breakpoints: {
-                0: {
-                    slidesPerView: 2,
-                    spaceBetween: 20
-                },
-                768: {
-                    slidesPerView: 1,
-                    spaceBetween: 10
-                },
-                1050: {
-                    slidesPerView: 2,
-                    spaceBetween: 0
-                },
-                1381: {
-                    slidesPerView: 3,
-                }
+            1050: {
+                slidesPerView: 2,
+                spaceBetween: 10
+            },
+            1381: {
+                slidesPerView: 3,
+                watchOverflow: true
+
             }
-        });
-    }
+        }
+    };
+
+    // if ($('.slider-brands .card').length > 3) {
+    //
+    //     $('#popularBrandsPagination').addClass('brands-pagination_active');
+    //     $('.slider-brands').removeClass('slider-brands_static');
+
+    var swiperBrands = new Swiper('.slider-brands', brandsSettings);
+
+// }
 
     /**
      * SLIDER-REVIEWS
@@ -124,7 +129,6 @@ $(document).ready(function () {
     $('.custom-select').niceSelect();
 
 
-
     /**
      * CARD HEIGHT
      **/
@@ -167,4 +171,5 @@ $(document).ready(function () {
             setEqualHeight();
         }
     })
-});
+})
+;
