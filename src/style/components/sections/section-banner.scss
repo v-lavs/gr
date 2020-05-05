@@ -525,6 +525,14 @@
   .section-banner {
     .container-default {
       height: 50vh;
+      @media (orientation: landscape) {
+        height: 75vw;
+
+        .link_top .inner {
+          max-height: none;
+          padding-bottom: 15vw;
+        }
+      }
     }
 
     .banner-category .inner {
