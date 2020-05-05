@@ -110,41 +110,23 @@ $(document).ready(function () {
             }
         },
     };
-    var logoSliderMob;
+    var logoSliderMob = new Swiper('.logo-slider-mob', logoSettings);
 
     var windowWw = $(window).width();
 
-    $(window).on('resize', function () {
+    $(window).on('load resize', function () {
         var resizedWindowWidth = $(window).width();
 
         if (windowWw !== resizedWindowWidth) {
 
             windowWw = resizedWindowWidth;
-            if (resizedWindowWidth > 767) {
+            if (resizedWindowWidth > 768) {
                 logoSliderMob.destroy(true, true);
             } else {
                 logoSliderMob = new Swiper('.logo-slider-mob', logoSettings);
             }
         }
     });
-
-    // if ($(window).outerWidth() <= 767) {
-    //     //  logoSliderMob = new Swiper('.logo-slider-mob', {
-    //     //     breakpoints: {
-    //     //         0: {
-    //     //             slidesPerView: 5,
-    //     //             freeMode: true,
-    //     //         },
-    //     //
-    //     //         767: {
-    //     //             slidesPerView: 5,
-    //     //         }
-    //     //     },
-    //     // });
-    // } else {
-    //     logoSliderMob.destroy(true);
-    // }
-
 
     /**
      * CUSTOM SELECT
