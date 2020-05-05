@@ -99,18 +99,51 @@ $(document).ready(function () {
      * SLIDER-LOGO
      **/
     var logoSettings = {
+        breakpoints: {
+            0: {
                 slidesPerView: 5,
                 freeMode: true,
-    };
-    var logoSliderMob = new Swiper('.logo-slider-mob', logoSettings);
-    $(window).on('resize', function () {
-        if ($(window).outerWidth() >= 768 ) {
-            logoSliderMob.destroy(true, true);
-            } else {
+            },
 
-            logoSliderMob = new Swiper('.logo-slider-mob', logoSettings);
+            768: {
+                slidesPerView: 'auto',
+            }
+        },
+    };
+    var logoSliderMob;
+
+    var windowWw = $(window).width();
+
+    $(window).on('resize', function () {
+        var resizedWindowWidth = $(window).width();
+
+        if (windowWw !== resizedWindowWidth) {
+
+            windowWw = resizedWindowWidth;
+            if (resizedWindowWidth > 767) {
+                logoSliderMob.destroy(true, true);
+            } else {
+                logoSliderMob = new Swiper('.logo-slider-mob', logoSettings);
+            }
         }
     });
+
+    // if ($(window).outerWidth() <= 767) {
+    //     //  logoSliderMob = new Swiper('.logo-slider-mob', {
+    //     //     breakpoints: {
+    //     //         0: {
+    //     //             slidesPerView: 5,
+    //     //             freeMode: true,
+    //     //         },
+    //     //
+    //     //         767: {
+    //     //             slidesPerView: 5,
+    //     //         }
+    //     //     },
+    //     // });
+    // } else {
+    //     logoSliderMob.destroy(true);
+    // }
 
 
     /**
