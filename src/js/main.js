@@ -89,7 +89,7 @@ $(document).ready(function () {
                 spaceBetween: 30,
                 autoHeight: true,
             },
-            767: {
+            581: {
                 direction: 'vertical',
                 slidesPerView: 1,
                 spaceBetween: 100,
