@@ -50,15 +50,8 @@ $(document).ready(function () {
             }
         }
     };
-
-    // if ($('.slider-brands .card').length > 3) {
-    //
-    //     $('#popularBrandsPagination').addClass('brands-pagination_active');
-    //     $('.slider-brands').removeClass('slider-brands_static');
-
     var swiperBrands = new Swiper('.slider-brands', brandsSettings);
 
-// }
 
     /**
      * SLIDER-REVIEWS
