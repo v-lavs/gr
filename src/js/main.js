@@ -11,6 +11,13 @@
  **/
 
 $(document).ready(function () {
+    function setReviewSlideHeight(resizedWindowWidth) {
+        if (resizedWindowWidth > 580) {
+            setSlideHeight();
+        } else {
+            $('.slider-reviews').css({height: ''})
+        }
+    }
 
     /**
      * SLIDER-BRANDS
@@ -99,34 +106,16 @@ $(document).ready(function () {
      * SLIDER-LOGO
      **/
     var logoSettings = {
-        breakpoints: {
-            0: {
-                slidesPerView: 5,
-                freeMode: true,
-            },
-
-            768: {
-                slidesPerView: 'auto',
-            }
-        },
+        slidesPerView: 5,
+        freeMode: true,
     };
-    var logoSliderMob = new Swiper('.logo-slider-mob', logoSettings);
 
-    var windowWw = $(window).width();
+    var logoSliderMob;
 
-    $(window).on('load resize', function () {
-        var resizedWindowWidth = $(window).width();
+    if ($(window).width() < 767) {
+        logoSliderMob = new Swiper('.logo-slider-mob', logoSettings);
+    }
 
-        if (windowWw !== resizedWindowWidth) {
-
-            windowWw = resizedWindowWidth;
-            if (resizedWindowWidth > 768) {
-                logoSliderMob.destroy(true, true);
-            } else {
-                logoSliderMob = new Swiper('.logo-slider-mob', logoSettings);
-            }
-        }
-    });
 
     /**
      * CUSTOM SELECT
@@ -153,18 +142,23 @@ $(document).ready(function () {
 
     var windowW = $(window).width();
 
+    setReviewSlideHeight(windowW);
+
     $(window).on('resize orientationchange', function () {
         var resizedWindowWidth = $(window).width();
 
         if (windowW !== resizedWindowWidth) {
             swiperReviews.destroy(true, true);
 
-            windowW = resizedWindowWidth;
-            if (resizedWindowWidth > 580) {
-                setSlideHeight();
+            if ($(window).width() < 768 && !logoSliderMob) {
+                logoSliderMob = new Swiper('.logo-slider-mob', logoSettings);
             } else {
-                $('.slider-reviews').css({height: ''})
+                logoSliderMob.destroy();
             }
+
+            windowW = resizedWindowWidth;
+
+            setReviewSlideHeight(resizedWindowWidth);
 
             swiperReviews = new Swiper('.slider-reviews', reviewSettings);
 
