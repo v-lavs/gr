@@ -123,6 +123,8 @@ $(document).ready(function () {
 
     $('.custom-select').niceSelect();
 
+
+
     /**
      * CARD HEIGHT
      **/
