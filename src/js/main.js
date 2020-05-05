@@ -98,22 +98,20 @@ $(document).ready(function () {
     /**
      * SLIDER-LOGO
      **/
-    if ($(window).outerWidth() <= 767) {
-    var    logoSliderMob = new Swiper('.logo-slider-mob', {
-            breakpoints: {
-                0: {
-                    slidesPerView: 5,
-                    freeMode: true,
-                },
+    var logoSettings = {
+                slidesPerView: 5,
+                freeMode: true,
+    };
+    var logoSliderMob = new Swiper('.logo-slider-mob', logoSettings);
+    $(window).on('resize', function () {
+        if ($(window).outerWidth() >= 768 ) {
+            logoSliderMob.destroy(true, true);
+            } else {
 
-                767: {
-                    slidesPerView: 5,
-                }
-            },
-        });
-    } else {
-        destroySwiper(logoSliderMob);
-    }
+            logoSliderMob = new Swiper('.logo-slider-mob', logoSettings);
+        }
+    });
+
 
     /**
      * CUSTOM SELECT
