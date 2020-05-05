@@ -7,19 +7,6 @@
     justify-content: center;
     position: relative;
     height: 80vh;
-
-    &:before {
-      display: none;
-      left: 50%;
-      transform: rotate(-45deg);
-    }
-
-    &:after {
-      display: none;
-      left: 50%;
-      transform: rotate(45deg);
-    }
-
   }
 
   .side {
@@ -283,6 +270,7 @@
 }
 
 //--------- ANIMATION  -----------
+
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -589,7 +577,7 @@
     }
 
     .side2 {
-      clip-path: polygon(50% 50%, 25% 0, 76% 0);
+      clip-path: polygon(50% 50%, 24% 0, 77% 0);
     }
 
     .side3 {
@@ -597,7 +585,7 @@
     }
 
     .side4 {
-      clip-path: polygon(50% 50%, 25% 100%, 76% 100%);
+      clip-path: polygon(50% 50%, 24% 100%, 77% 100%);
     }
   }
 }

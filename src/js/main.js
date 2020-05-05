@@ -89,7 +89,7 @@ $(document).ready(function () {
                 spaceBetween: 30,
                 autoHeight: true,
             },
-            580: {
+            767: {
                 direction: 'vertical',
                 slidesPerView: 1,
                 spaceBetween: 100,
@@ -133,11 +133,11 @@ $(document).ready(function () {
         var max_card_height = 0;
         var $advantagesCards = $('.advantages-card');
         $advantagesCards.each(function () {
-            if ($(this).height() > max_card_height) { // если высота колонки больше значения максимальной высоты,
-                max_card_height = $(this).height(); // то она сама становится новой максимальной высотой
+            if ($(this).height() > max_card_height) {
+                max_card_height = $(this).height();
             }
         });
-        $advantagesCards.css({minHeight: $(window).width() > 767 ? max_card_height : 'auto'}); // устанавливаем высоту каждой колонки равной значению максимальной высоты
+        $advantagesCards.css({minHeight: $(window).width() > 767 ? max_card_height : 'auto'});
     }
 
     setEqualHeight();
