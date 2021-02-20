@@ -45,8 +45,7 @@ $(document).ready(function () {
             },
             1381: {
                 slidesPerView: 3,
-                watchOverflow: true
-
+                watchOverflow: true,
             }
         }
     };

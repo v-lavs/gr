@@ -23,7 +23,7 @@
   }
 
   .side1 {
-    clip-path: polygon(26.5% 0, 50% 50%, 26.5% 100%, 0 100%, 0 0);
+    clip-path: polygon(27.5% 0, 50% 50%, 27.5% 100%, 0 100%, 0 0);
     transform: translateX(-20%);
 
   }
@@ -34,7 +34,7 @@
   }
 
   .side3 {
-    clip-path: polygon(73.9% 0, 50% 50%, 73.9% 100%, 100% 100%, 100% 0);
+    clip-path: polygon(72.9% 0, 50% 50%, 72.9% 100%, 100% 100%, 100% 0);
     transform: translateX(20%);
   }
 
@@ -635,7 +635,7 @@
   }
 }
 
-@media screen and (max-width: 520px) {
+@media all and (max-width: 520px) {
   .section-banner {
     .link_right {
       .inner {
@@ -664,7 +664,7 @@
   }
 }
 
-@media screen and (max-width: 380px) {
+@media all and (max-width: 380px) {
   .section-banner {
     .banner-category {
       &__title {

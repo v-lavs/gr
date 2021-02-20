@@ -49,7 +49,6 @@ gulp.task('js:build', function () {
       extensions: "js",
       hardFail: true
     }))
-    .pipe(uglify())
     .pipe(gulp.dest(path.build.js));
 });
 
@@ -72,7 +71,6 @@ gulp.task('style:build', function () {
     }))
     .pipe(prefixer())
     .pipe(gcmq())
-    .pipe(cssmin())
     .pipe(gulp.dest(path.build.css));
 });
 

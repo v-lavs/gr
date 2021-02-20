@@ -40,7 +40,7 @@
 }
 
 
-@media all and(max-width: 990px) {
+@include respond-to($sm) {
   .title_big {
     font-size: 34px;
   }

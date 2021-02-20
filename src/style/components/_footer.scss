@@ -99,7 +99,7 @@
   }
 }
 
-@media all and(max-width: 767px) {
+@include respond-to($xs) {
   .footer {
     &_top {
       .list__item {
